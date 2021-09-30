@@ -1,0 +1,12 @@
+{
+	"intro":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/01.mp3",
+	"swam_forward":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/02.mp3",
+	"hit_the_wall":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/03.mp3",
+	"let's_go_around_the_wall":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/04.mp3",
+	"fish_is_free_0":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/05_01.mp3",
+	"fish_is_free_1":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/05_02.mp3",
+	"fish_is_free_2":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/05_03.mp3",
+	"flow_presentation":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/06.mp3",
+	"door_presentation":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/07.mp3",
+	"evileater_presentation":"https://storage.googleapis.com/zebrainy-games/unit-team-tests/maze_2.0_sounds/rus/08.mp3"
+}
