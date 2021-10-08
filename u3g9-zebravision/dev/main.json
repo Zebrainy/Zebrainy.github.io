@@ -1,0 +1,104 @@
+{
+    "levels":[
+        {
+            "timeoutMin": 2.8,
+            "timeoutMax": 3.8,
+            "tvCount": 2,
+            "phasesSets": [
+                "toddlers_easy", "kids_easy", "adult_easy", "all_easy"
+            ],
+            "mapPrefabType": "tv_1",
+            "completeImage": "ZebraSmile1"
+        },
+        {
+            "timeoutMin": 2.5,
+            "timeoutMax": 3.5,
+            "tvCount": 3,
+            "phasesSets": [
+                "toddlers_easy", "kids_easy", "adult_easy", "all_easy"
+            ],
+            "mapPrefabType": "tv_2",
+            "completeImage": "ZebraSmile2"
+        },
+        {
+            "timeoutMin": 2.3,
+            "timeoutMax": 3.3,
+            "tvCount": 4,
+            "phasesSets": [
+                "toddlers_easy", "kids_easy", "adult_easy", "all_easy"
+            ],
+            "mapPrefabType": "tv_3",
+            "completeImage": "ZebraSmile6"
+        },
+        {
+            "timeoutMin": 2,
+            "timeoutMax": 3,
+            "tvCount": 5,
+            "phasesSets": [
+                "toddlers_easy", "kids_easy", "adult_easy", "all_easy"
+            ],
+            "mapPrefabType": "tv_4",
+            "completeImage": "ZebraSmile5"
+        },
+        {
+            "timeoutMin": 2,
+            "timeoutMax": 3,
+            "tvCount": 6,
+            "phasesSets": [
+                "toddlers_easy", "kids_easy", "adult_easy", "all_easy"
+            ],
+            "mapPrefabType": "tv_1",
+            "completeImage": "ZebraSmile3"
+        },
+		{
+            "timeoutMin": 1.8,
+            "timeoutMax": 2.8,
+            "tvCount": 6,
+            "phasesSets": [
+                "toddlers_hard", "kids_hard", "adult_easy", "all_easy"
+            ],
+            "mapPrefabType": "tv_2",
+            "completeImage": "ZebraSmile4"
+        },
+		{
+            "timeoutMin": 1.3,
+            "timeoutMax": 2.3,
+            "tvCount": 6,
+            "phasesSets": [
+                "toddlers_hard", "kids_hard", "adult_easy", "all_easy"
+            ],
+            "mapPrefabType": "tv_3",
+            "completeImage": "ZebraSmile8"
+        },
+		{
+            "timeoutMin": 1,
+            "timeoutMax": 2,
+            "tvCount": 6,
+            "phasesSets": [
+                "toddlers_hard", "kids_hard", "adult_hard", "all_hard"
+            ],
+            "mapPrefabType": "tv_4",
+            "completeImage": "ZebraSmile7"
+        },
+		{
+            "timeoutMin": 1.1,
+            "timeoutMax": 1.8,
+            "tvCount": 6,
+            "phasesSets": [
+                "toddlers_hard", "kids_hard", "adult_hard", "all_hard"
+            ],
+            "mapPrefabType": "tv_1",
+            "completeImage": "ZebraSmile10"
+        },
+		{
+            "timeoutMin": 1,
+            "timeoutMax": 1.5,
+            "tvCount": 6,
+            "phasesSets": [
+                "toddlers", "kids", "adult_hard", "all"
+            ],
+            "mapPrefabType": "tv_2",
+            "completeImage": "ZebraSmile9"
+        }
+    ]
+}
