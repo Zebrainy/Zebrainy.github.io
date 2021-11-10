@@ -1,0 +1,146 @@
+{
+    "complication": {
+        "complications": [
+            {
+                "session": 1,
+                "pieces": 4,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 2,
+                "pieces": 4,
+                "backVisible": true,
+                "repeat": false
+            },
+            {
+                "session": 3,
+                "pieces": 4,
+                "backVisible": false,
+                "repeat": true
+            },
+            {
+                "session": 4,
+                "pieces": 4,
+                "backVisible": true,
+                "repeat": false
+            },
+            {
+                "session": 5,
+                "pieces": 6,
+                "backVisible": true,
+                "repeat": false
+            },
+            {
+                "session": 6,
+                "pieces": 6,
+                "backVisible": false,
+                "repeat": false
+            },
+            {
+                "session": 7,
+                "pieces": 6,
+                "backVisible": false,
+                "repeat": false
+            },
+            {
+                "session": 8,
+                "pieces": 6,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 9,
+                "pieces": 9,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 10,
+                "pieces": 9,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 11,
+                "pieces": 9,
+                "backVisible": false,
+                "repeat": true
+            },
+            {
+                "session": 12,
+                "pieces": 6,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 13,
+                "pieces": 9,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 14,
+                "pieces": 12,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 15,
+                "pieces": 12,
+                "backVisible": false,
+                "repeat": true
+            },
+            {
+                "session": 16,
+                "pieces": 12,
+                "backVisible": false,
+                "repeat": true
+            },
+            {
+                "session": 17,
+                "pieces": 6,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 18,
+                "pieces": 9,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 19,
+                "pieces": 16,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 20,
+                "pieces": 16,
+                "backVisible": true,
+                "repeat": true
+            },
+            {
+                "session": 21,
+                "pieces": 16,
+                "backVisible": false,
+                "repeat": true
+            },
+            {
+                "session": 22,
+                "pieces": 16,
+                "backVisible": false,
+                "repeat": true
+            },
+            {
+                "session": 23,
+                "pieces": 16,
+                "backVisible": false,
+                "repeat": true
+            }
+        ]
+    },
+    "errorsToRollback": 3,
+    "rollbackLevelsCount": 6
+}
