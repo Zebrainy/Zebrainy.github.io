@@ -1,0 +1,28 @@
+{
+    "CompletenessByAge": [
+      {
+        "Age": "Age_0_3",
+        "Completeness": 0.8
+      },
+      {
+        "Age": "Age_3_4",
+        "Completeness": 0.8
+      },
+      {
+        "Age": "Age_4_5",
+        "Completeness": 0.87
+      },
+      {
+        "Age": "Age_5_6",
+        "Completeness": 0.9
+      },
+      {
+        "Age": "Age_6_7",
+        "Completeness": 0.93
+      },
+      {
+        "Age": "Age_7_100",
+        "Completeness": 0.95
+      }
+    ]
+  }
