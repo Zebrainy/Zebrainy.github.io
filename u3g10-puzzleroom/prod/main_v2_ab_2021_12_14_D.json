@@ -1,0 +1,280 @@
+{
+    "errorsToRollback": 4,
+    "levelInRowToFastForward": 2,
+    "levels": [
+        {
+            "levelId": 1,
+            "cycle": 1,
+            "pieces": 4,
+            "backVisible": true
+        },
+        {
+            "levelId": 2,
+            "cycle": 1,
+            "pieces": 4,
+            "backVisible": true
+        },
+        {
+            "levelId": 3,
+            "cycle": 1,
+            "pieces": 6,
+            "backVisible": true
+        },
+        {
+            "levelId": 4,
+            "cycle": 2,
+            "pieces": 4,
+            "backVisible": false
+        },
+        {
+            "levelId": 5,
+            "cycle": 2,
+            "pieces": 4,
+            "backVisible": false
+        },
+        {
+            "levelId": 6,
+            "cycle": 2,
+            "pieces": 6,
+            "backVisible": false
+        },
+        {
+            "levelId": 7,
+            "cycle": 3,
+            "pieces": 4,
+            "backVisible": true
+        },
+        {
+            "levelId": 8,
+            "cycle": 3,
+            "pieces": 6,
+            "backVisible": true
+        },
+        {
+            "levelId": 9,
+            "cycle": 3,
+            "pieces": 6,
+            "backVisible": true
+        },
+        {
+            "levelId": 10,
+            "cycle": 4,
+            "pieces": 4,
+            "backVisible": false
+        },
+        {
+            "levelId": 11,
+            "cycle": 4,
+            "pieces": 6,
+            "backVisible": false
+        },
+        {
+            "levelId": 12,
+            "cycle": 4,
+            "pieces": 9,
+            "backVisible": true
+        },
+        {
+            "levelId": 13,
+            "cycle": 5,
+            "pieces": 6,
+            "backVisible": true
+        },
+        {
+            "levelId": 14,
+            "cycle": 5,
+            "pieces": 6,
+            "backVisible": true
+        },
+        {
+            "levelId": 15,
+            "cycle": 5,
+            "pieces": 9,
+            "backVisible": true
+        },
+        {
+            "levelId": 16,
+            "cycle": 6,
+            "pieces": 6,
+            "backVisible": false
+        },
+        {
+            "levelId": 17,
+            "cycle": 6,
+            "pieces": 6,
+            "backVisible": false
+        },
+        {
+            "levelId": 18,
+            "cycle": 6,
+            "pieces": 9,
+            "backVisible": false
+        },
+        {
+            "levelId": 19,
+            "cycle": 7,
+            "pieces": 6,
+            "backVisible": true
+        },
+        {
+            "levelId": 20,
+            "cycle": 7,
+            "pieces": 9,
+            "backVisible": true
+        },
+        {
+            "levelId": 21,
+            "cycle": 7,
+            "pieces": 9,
+            "backVisible": true
+        },
+        {
+            "levelId": 22,
+            "cycle": 8,
+            "pieces": 6,
+            "backVisible": false
+        },
+        {
+            "levelId": 23,
+            "cycle": 8,
+            "pieces": 9,
+            "backVisible": false
+        },
+        {
+            "levelId": 24,
+            "cycle": 8,
+            "pieces": 9,
+            "backVisible": false
+        },
+        {
+            "levelId": 25,
+            "cycle": 9,
+            "pieces": 6,
+            "backVisible": true
+        },
+        {
+            "levelId": 26,
+            "cycle": 9,
+            "pieces": 9,
+            "backVisible": true
+        },
+        {
+            "levelId": 27,
+            "cycle": 9,
+            "pieces": 12,
+            "backVisible": true
+        },
+        {
+            "levelId": 28,
+            "cycle": 10,
+            "pieces": 9,
+            "backVisible": true
+        },
+        {
+            "levelId": 29,
+            "cycle": 10,
+            "pieces": 9,
+            "backVisible": true
+        },
+        {
+            "levelId": 30,
+            "cycle": 10,
+            "pieces": 12,
+            "backVisible": true
+        },
+        {
+            "levelId": 31,
+            "cycle": 11,
+            "pieces": 6,
+            "backVisible": false
+        },
+        {
+            "levelId": 32,
+            "cycle": 11,
+            "pieces": 9,
+            "backVisible": false
+        },
+        {
+            "levelId": 33,
+            "cycle": 11,
+            "pieces": 12,
+            "backVisible": false
+        },
+        {
+            "levelId": 34,
+            "cycle": 12,
+            "pieces": 9,
+            "backVisible": false
+        },
+        {
+            "levelId": 35,
+            "cycle": 12,
+            "pieces": 9,
+            "backVisible": false
+        },
+        {
+            "levelId": 36,
+            "cycle": 12,
+            "pieces": 12,
+            "backVisible": false
+        },
+        {
+            "levelId": 37,
+            "cycle": 13,
+            "pieces": 9,
+            "backVisible": true
+        },
+        {
+            "levelId": 38,
+            "cycle": 13,
+            "pieces": 12,
+            "backVisible": true
+        },
+        {
+            "levelId": 39,
+            "cycle": 13,
+            "pieces": 16,
+            "backVisible": true
+        },
+        {
+            "levelId": 40,
+            "cycle": 14,
+            "pieces": 9,
+            "backVisible": false
+        },
+        {
+            "levelId": 41,
+            "cycle": 14,
+            "pieces": 12,
+            "backVisible": false
+        },
+        {
+            "levelId": 42,
+            "cycle": 14,
+            "pieces": 16,
+            "backVisible": false
+        }
+    ],
+    "playTimeToFastForward": [
+        {
+            "pieces": 4,
+            "secs": 13
+        },
+        {
+            "pieces": 6,
+            "secs": 20
+        },
+        {
+            "pieces": 9,
+            "secs": 35
+        },
+        {
+            "pieces": 12,
+            "secs": 45
+        },
+        {
+            "pieces": 16,
+            "secs": 10
+        }
+    ]
+}
