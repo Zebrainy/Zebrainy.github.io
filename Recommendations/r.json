@@ -33,5 +33,20 @@
         "u2g8-mirror",
         "u1g5-kitties",
         "mg:Smiles"
+    ],
+    "u3g2-magicpaint": [
+        "mg:Smiles",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u3g4-snowboard": [
+        "mg:Smiles",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u3g10-puzzleroom": [
+        "mg:Smiles",
+        "u2g8-mirror",
+        "u1g5-kitties"
     ]
 }
