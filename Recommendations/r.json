@@ -8,5 +8,30 @@
         "u2g8-mirror",
         "u1g5-kitties",
         "mg:Smiles"
+    ],
+    "u3g3-mosaic": [
+        "u2g8-mirror",
+        "u1g5-kitties",
+        "mg:Smiles"
+    ],
+    "u3g5-shadows": [
+        "u2g8-mirror",
+        "u1g5-kitties",
+        "mg:Smiles"
+    ],
+    "u3g6-dots": [
+        "u2g8-mirror",
+        "u1g5-kitties",
+        "mg:Smiles"
+    ],
+    "u3g7-apples": [
+        "u2g8-mirror",
+        "u1g5-kitties",
+        "mg:Smiles"
+    ],
+    "u3g8-blocks": [
+        "u2g8-mirror",
+        "u1g5-kitties",
+        "mg:Smiles"
     ]
 }
