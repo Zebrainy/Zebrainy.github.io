@@ -1,51 +1,51 @@
 {
     "u3g9-zebravision": [
+        "u3g3-mosaic",
         "u2g8-mirror",
-        "u1g5-kitties",
-        "mg:Smiles"
+        "u1g5-kitties"
     ],
     "u3g1-ninja": [
+        "u3g3-mosaic",
         "u2g8-mirror",
-        "u1g5-kitties",
-        "mg:Smiles"
+        "u1g5-kitties"
     ],
     "u3g3-mosaic": [
+        "u3g3-mosaic",
         "u2g8-mirror",
-        "u1g5-kitties",
-        "mg:Smiles"
+        "u1g5-kitties"
     ],
     "u3g5-shadows": [
+        "u3g3-mosaic",
         "u2g8-mirror",
-        "u1g5-kitties",
-        "mg:Smiles"
+        "u1g5-kitties"
     ],
     "u3g6-dots": [
+        "u3g3-mosaic",
         "u2g8-mirror",
-        "u1g5-kitties",
-        "mg:Smiles"
+        "u1g5-kitties"
     ],
     "u3g7-apples": [
+        "u3g3-mosaic",
         "u2g8-mirror",
-        "u1g5-kitties",
-        "mg:Smiles"
+        "u1g5-kitties"
     ],
     "u3g8-blocks": [
+        "u3g3-mosaic",
         "u2g8-mirror",
-        "u1g5-kitties",
-        "mg:Smiles"
+        "u1g5-kitties"
     ],
     "u3g2-magicpaint": [
-        "mg:Smiles",
+        "u3g3-mosaic",
         "u2g8-mirror",
         "u1g5-kitties"
     ],
     "u3g4-snowboard": [
-        "mg:Smiles",
+        "u3g3-mosaic",
         "u2g8-mirror",
         "u1g5-kitties"
     ],
     "u3g10-puzzleroom": [
-        "mg:Smiles",
+        "u3g3-mosaic",
         "u2g8-mirror",
         "u1g5-kitties"
     ]
