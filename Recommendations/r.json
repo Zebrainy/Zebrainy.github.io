@@ -48,5 +48,60 @@
         "u3g3-mosaic",
         "u2g8-mirror",
         "u1g5-kitties"
+    ],
+    "u1g8-reading-3": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u1g8-reading-3": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "lg-puzzleshapes": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u1g1-zebra-chef": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u1g3-ghosts": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u1g5-diner": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u1g4-bar": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u1g1-music": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u1g5-kitties": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u1g6-catcode-2": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "zebranotes-game": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
     ]
 }
