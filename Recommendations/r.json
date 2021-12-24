@@ -138,5 +138,15 @@
         "u3g3-mosaic",
         "u2g10-mirror",
         "u1g5-kitties"
+    ],
+    "u0g1-butterfly": [
+        "u3g3-mosaic",
+        "u2g10-mirror",
+        "u1g5-kitties"
+    ],
+    "u0g2-zebra-space": [
+        "u3g3-mosaic",
+        "u2g10-mirror",
+        "u1g5-kitties"
     ]
 }
