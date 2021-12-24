@@ -1,142 +1,142 @@
 {
     "u3g9-zebravision": [
         "mg:Smiles",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g1-ninja": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g3-mosaic": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g5-shadows": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g6-dots": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g7-apples": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g8-blocks": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g2-magicpaint": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g4-snowboard": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u3g10-puzzleroom": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u1g8-reading-3": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "lg-puzzleshapes": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u1g1-zebra-chef": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u1g3-ghosts": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u1g5-diner": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u1g4-bar": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u1g1-music": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u1g5-kitties": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u1g6-catcode-2": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "zebranotes-game": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "lg-colorbook ": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u2g5-dig": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u2g1-immunity": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u2g2-bee": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u2g6-bubble": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u2g7-zebra-sleep": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u2g9-maze": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ],
     "u2g10-mirror": [
         "u3g3-mosaic",
-        "u2g8-mirror",
+        "u2g10-mirror",
         "u1g5-kitties"
     ]
 }
