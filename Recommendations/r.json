@@ -103,5 +103,10 @@
         "u3g3-mosaic",
         "u2g8-mirror",
         "u1g5-kitties"
+    ],
+    "u2g5-dig": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
     ]
 }
