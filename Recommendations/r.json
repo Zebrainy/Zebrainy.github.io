@@ -108,5 +108,35 @@
         "u3g3-mosaic",
         "u2g8-mirror",
         "u1g5-kitties"
+    ],
+    "u2g1-immunity": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u2g2-bee": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u2g6-bubble": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u2g7-zebra-sleep": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u2g9-maze": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
+    ],
+    "u2g10-mirror": [
+        "u3g3-mosaic",
+        "u2g8-mirror",
+        "u1g5-kitties"
     ]
 }
