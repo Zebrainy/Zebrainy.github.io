@@ -1,0 +1,202 @@
+{
+    "cs:AnimalPuzzle": [
+        "u3g3-mosaic",
+        "u3g2-magicpaint",
+        "u3g6-dots"
+    ],
+    "u3g7-apples": [
+        "u1g5-kitties",
+        "u1g1-zebra-chef",
+        "lg-puzzleshapes"
+    ],
+    "u1g4-bar": [
+        "u1g5-diner",
+        "u2g6-bubble",
+        "u3g4-snowboard"
+    ],
+    "u2g2-bee": [
+        "u2g6-bubble",
+        "u3g4-snowboard",
+        "u1g4-bar"
+    ],
+    "u3g8-blocks": [
+        "u3g6-dots",
+        "u3g2-magicpaint",
+        "u2g9-maze"
+    ],
+    "u2g6-bubble": [
+        "u3g4-snowboard",
+        "u1g4-bar",
+        "u2g2-bee"
+    ],
+    "u0g1-butterfly": [
+        "u2g7-zebra-sleep",
+        "u3g4-snowboard",
+        "cs:Fishes"
+    ],
+    "u1g6-catcode": [
+        "u3g4-snowboard",
+        "u2g1-immunity",
+        "lg-match-one"
+    ],
+    "mg:Cats": [
+        "mg:Constructor",
+        "mg:Math",
+        "u1g5-diner"
+    ],
+    "lg-colorbook": [
+        "cs:Fishes",
+        "u3g4-snowboard",
+        "lg-match-one"
+    ],
+    "mg:Constructor": [
+        "mg:Cats",
+        "cs:Fishes",
+        "u2g6-bubble"
+    ],
+    "u2g5-dig": [
+        "u2g10-mirror",
+        "u2g9-maze",
+        "u0g2-zebra-space"
+    ],
+    "u1g5-diner": [
+        "u1g4-bar",
+        "u3g1-ninja",
+        "u2g6-bubble"
+    ],
+    "u3g6-dots": [
+        "u3g8-blocks",
+        "u3g2-magicpaint",
+        "u3g3-mosaic"
+    ],
+    "cs:Fishes": [
+        "u3g4-snowboard",
+        "lg-match-one",
+        "lg-colorbook"
+    ],
+    "Fishing": [
+        "mg:Smiles",
+        "mg:Read",
+        "u2g5-dig"
+    ],
+    "u1g3-ghosts": [
+        "u3g4-snowboard",
+        "u2g7-zebra-sleep",
+        "cs:Fishes"
+    ],
+    "u2g1-immunity": [
+        "u2g7-zebra-sleep",
+        "u3g4-snowboard",
+        "u0g1-butterfly"
+    ],
+    "u1g5-kitties": [
+        "u3g7-apples",
+        "lg-puzzleshapes",
+        "u1g4-bar"
+    ],
+    "u3g2-magicpaint": [
+        "cs:AnimalPuzzle",
+        "u3g3-mosaic",
+        "u3g6-dots"
+    ],
+    "lg-match-one": [
+        "cs:Fishes",
+        "u3g4-snowboard",
+        "u2g6-bubble"
+    ],
+    "mg:Math": [
+        "mg:Cats",
+        "mg:Constructor",
+        "lg-match-one"
+    ],
+    "cs:Memory": [
+        "u3g1-ninja",
+        "u2g6-bubble",
+        "cs:Fishes"
+    ],
+    "u2g4-monsters": [
+        "u2g1-immunity",
+        "u0g1-butterfly",
+        "u3g4-snowboard"
+    ],
+    "u3g3-mosaic": [
+        "cs:AnimalPuzzle",
+        "u3g2-magicpaint",
+        "u3g6-dots"
+    ],
+    "u2g9-maze": [
+        "u2g10-mirror",
+        "u3g8-blocks",
+        "u2g5-dig"
+    ],
+    "u2g10-mirror": [
+        "u2g9-maze",
+        "u2g5-dig",
+        "u0g2-zebra-space"
+    ],
+    "u3g1-ninja": [
+        "u1g5-diner",
+        "u2g6-bubble",
+        "u1g1-zebra-chef"
+    ],
+    "lg-puzzleshapes": [
+        "u1g1-zebra-chef",
+        "u1g5-kitties",
+        "u3g7-apples"
+    ],
+    "mg:Read": [
+        "u2g5-dig",
+        "u2g10-mirror",
+        "u2g9-maze"
+    ],
+    "u1g8-reading-2": [
+        "u3g8-blocks",
+        "u2g5-dig",
+        "u2g9-maze"
+    ],
+    "u1g8-reading-3": [
+        "u3g6-dots",
+        "u2g9-maze",
+        "u3g2-magicpaint"
+    ],
+    "u3g5-shadows": [
+        "lg-colorbook",
+        "cs:Fishes",
+        "cs:Memory"
+    ],
+    "mg:Smiles": [
+        "lg-puzzleshapes",
+        "u1g1-zebra-chef",
+        "u3g7-apples"
+    ],
+    "u3g4-snowboard": [
+        "cs:Fishes",
+        "u2g6-bubble",
+        "u1g4-bar"
+    ],
+    "u0g2-zebra-space": [
+        "u2g5-dig",
+        "u2g10-mirror",
+        "u2g9-maze"
+    ],
+    "u1g1-zebra-chef": [
+        "lg-puzzleshapes",
+        "u3g7-apples",
+        "u3g1-ninja"
+    ],
+    "u2g7-zebra-sleep": [
+        "u0g1-butterfly",
+        "u3g4-snowboard",
+        "cs:Fishes"
+    ],
+    "u3g9-zebravision": [
+        "u2g10-mirror",
+        "u0g2-zebra-space",
+        "u2g9-maze"
+    ],
+    "u1g1-music": [
+        "u0g1-butterfly",
+        "u2g7-zebra-sleep",
+        "u2g1-immunity"
+    ]
+}
