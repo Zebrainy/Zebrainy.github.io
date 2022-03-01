@@ -153,5 +153,22 @@
         "u3g3-mosaic",
         "mg:Smiles",
         "u1g5-kitties"
+    ],
+    "dig": [
+        "mg:Smiles",
+        "u3g7-apples",
+        "u3g1-ninja",
+        "u3g6-dots",
+        "u1g6-catcode",
+        "u1g6-catcode-2",
+        "u2g11-puzzleroom"
+    ],
+    "u2g11-dig": [
+        "dig",
+        "dig",
+        "dig",
+        "dig",
+        "dig",
+        "dig"
     ]
 }
