@@ -178,5 +178,13 @@
         "u3g8-blocks",
         "u2g10-mirror",
         "u3g6-dots"
+    ],
+    "maze": [
+        "lg-puzzleshapes",
+        "u3g2-magicpaint",
+        "cs:AnimalPuzzle",
+        "u3g3-mosaic",
+        "u3g5-shadows",
+        "u1g1-zebra-chef"
     ]
 }
