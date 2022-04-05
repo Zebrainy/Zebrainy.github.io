@@ -218,6 +218,7 @@
     "u2g9-maze": [
         "u2g10-mirror",
         "u2g11-dig",
+        "dig",
         "u3g8-blocks",
         "u3g6-dots",
         "u0g2-zebra-space",
@@ -226,6 +227,7 @@
     "maze": [
         "u2g10-mirror",
         "u2g11-dig",
+        "dig",
         "u3g8-blocks",
         "u3g6-dots",
         "u0g2-zebra-space",
@@ -235,6 +237,7 @@
         "u2g9-maze",
         "maze",
         "u2g11-dig",
+        "dig",
         "u0g2-zebra-space",
         "u3g8-blocks",
         "u3g6-dots",
@@ -250,6 +253,7 @@
     ],
     "u2g11-puzzleroom": [
         "u2g11-dig",
+        "dig",
         "u2g10-mirror",
         "u0g2-zebra-space",
         "u2g9-maze",
@@ -267,6 +271,7 @@
     ],
     "mg:Read": [
         "u2g11-dig",
+        "dig",
         "u2g10-mirror",
         "u2g9-maze",
         "maze",
@@ -309,6 +314,7 @@
     ],
     "u0g2-zebra-space": [
         "u2g11-dig",
+        "dig",
         "u2g10-mirror",
         "u2g9-maze",
         "maze",
@@ -339,6 +345,7 @@
         "u2g9-maze",
         "maze",
         "u2g11-dig",
+        "dig",
         "u1g8-reading-3"
     ],
     "u1g1-music": [
