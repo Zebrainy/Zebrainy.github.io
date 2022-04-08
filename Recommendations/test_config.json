@@ -186,5 +186,12 @@
         "u3g3-mosaic",
         "u3g5-shadows",
         "u1g1-zebra-chef"
+    ],
+    "Maths": [
+        "dig",
+        "u3g7-apples",
+        "u3g8-blocks",
+        "u1g6-catcode-2",
+        "u3g1-ninja"
     ]
 }
