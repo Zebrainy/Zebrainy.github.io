@@ -10,7 +10,9 @@
     <body>
         hello world
         <script>
-            YaSendSuggestToken('http://localhost:3001/', { flag: true })
+            const postOrigin = /url=([^#]+)/.exec(document.location)
+            console.log('redirect origin: ', postOrigin)
+            YaSendSuggestToken(postOrigin, { flag: true })
             console.log('location: ', window.location.href)
         </script>
     </body>
