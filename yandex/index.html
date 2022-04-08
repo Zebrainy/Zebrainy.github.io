@@ -9,11 +9,14 @@
     </head>
     <body>
         hello world
+        <span id="url-desc"> </span>
         <script>
             const postOrigin = /url=([^#]+)/.exec(document.location)[1]
             console.log('redirect origin: ', postOrigin)
             YaSendSuggestToken(postOrigin, { flag: true })
             console.log('location: ', window.location.href)
+            document.querySelector('#url-desc').textContent =
+                '  Урл, который мне пришёл: ' + window.location.href
         </script>
     </body>
 </html>
