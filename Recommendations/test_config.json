@@ -54,6 +54,15 @@
         "u2g10-mirror",
         "u1g5-kitties"
     ],
+    "reading": [
+        "u3g6-dots",
+        "u2g9-maze",
+        "maze",
+        "u3g2-magicpaint",
+        "u3g8-blocks",
+        "u2g10-mirror",
+        "u3g3-mosaic"
+    ],
     "lg-puzzleshapes": [
         "u3g3-mosaic",
         "u2g10-mirror",
