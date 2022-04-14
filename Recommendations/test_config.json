@@ -190,6 +190,8 @@
         "u3g6-dots"
     ],
     "maze": [
+        "dig",
+        "reading",
         "lg-puzzleshapes",
         "u3g2-magicpaint",
         "cs:AnimalPuzzle",
