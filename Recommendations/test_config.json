@@ -164,6 +164,7 @@
         "u1g5-kitties"
     ],
     "dig": [
+        "reading",
         "mg:Smiles",
         "u3g7-apples",
         "u3g1-ninja",
@@ -197,6 +198,7 @@
         "u1g1-zebra-chef"
     ],
     "Maths": [
+        "reading",
         "dig",
         "u3g7-apples",
         "u3g8-blocks",
