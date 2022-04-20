@@ -54,6 +54,15 @@
         "u2g10-mirror",
         "u1g5-kitties"
     ],
+    "reading": [
+        "u3g6-dots",
+        "u2g9-maze",
+        "maze",
+        "u3g2-magicpaint",
+        "u3g8-blocks",
+        "u2g10-mirror",
+        "u3g3-mosaic"
+    ],
     "lg-puzzleshapes": [
         "u3g3-mosaic",
         "u2g10-mirror",
@@ -155,6 +164,7 @@
         "u1g5-kitties"
     ],
     "dig": [
+        "reading",
         "mg:Smiles",
         "u3g7-apples",
         "u3g1-ninja",
@@ -180,6 +190,8 @@
         "u3g6-dots"
     ],
     "maze": [
+        "dig",
+        "reading",
         "lg-puzzleshapes",
         "u3g2-magicpaint",
         "cs:AnimalPuzzle",
@@ -188,6 +200,7 @@
         "u1g1-zebra-chef"
     ],
     "Maths": [
+        "reading",
         "dig",
         "u3g7-apples",
         "u3g8-blocks",
