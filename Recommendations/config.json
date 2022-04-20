@@ -288,6 +288,15 @@
         "u2g10-mirror",
         "u3g3-mosaic"
     ],
+    "reading": [
+        "u3g6-dots",
+        "u2g9-maze",
+        "maze",
+        "u3g2-magicpaint",
+        "u3g8-blocks",
+        "u2g10-mirror",
+        "u3g3-mosaic"
+    ],
     "u3g5-shadows": [
         "cs:Memory",
         "lg-colorbook",
@@ -346,7 +355,8 @@
         "maze",
         "u2g11-dig",
         "dig",
-        "u1g8-reading-3"
+        "u1g8-reading-3",
+        "reading"
     ],
     "u1g1-music": [
         "u0g1-butterfly",
@@ -383,6 +393,7 @@
     ],
     "island-cocos": [
         "u1g8-reading-3",
+        "reading",
         "u2g9-maze",
         "maze",
         "u1g6-catcode-2",
@@ -394,6 +405,7 @@
         "u1g6-catcode-2",
         "u3g8-blocks",
         "u1g8-reading-3",
+        "reading",
         "lg-constructor-cocos",
         "u2g9-maze",
         "maze",
