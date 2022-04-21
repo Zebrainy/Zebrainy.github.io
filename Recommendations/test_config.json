@@ -10,7 +10,7 @@
         "u1g5-kitties"
     ],
     "u3g3-mosaic": [
-        "u3g3-mosaic",
+        "magicPaint",
         "u2g10-mirror",
         "u1g5-kitties"
     ],
@@ -191,7 +191,7 @@
     ],
     "maze": [
         "dig",
-        "reading",
+        "magicPaint",
         "lg-puzzleshapes",
         "u3g2-magicpaint",
         "cs:AnimalPuzzle",
@@ -206,5 +206,10 @@
         "u3g8-blocks",
         "u1g6-catcode-2",
         "u3g1-ninja"
+    ],
+    "magicPaint": [
+        "u3g3-mosaic",
+        "maze"
+        "u1g5-kitties"
     ]
 }
