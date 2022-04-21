@@ -1,4 +1,4 @@
-name: Reusable workflow - Build latest image
+name: Reusable workflow - Build latest image - dev
 
 on:
   workflow_call:
@@ -35,4 +35,4 @@ jobs:
           github_token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           github_repo: ${{ github.repository }}
           git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v"
+          git_tag_prefix: "dev-v"
