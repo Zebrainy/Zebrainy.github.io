@@ -27,10 +27,10 @@ jobs:
           repository: zebrainy/${{ inputs.repository_name }}
           tags: latest
 
-      - name: Tag new version
-        uses: pkgdeps/action-package-version-to-git-tag@v1.5.0
-        with:
-          github_token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
-          github_repo: ${{ github.repository }}
-          git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v"
+      # - name: Tag new version
+      #   uses: pkgdeps/action-package-version-to-git-tag@v1.5.0
+      #   with:
+      #     github_token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
+      #     github_repo: ${{ github.repository }}
+      #     git_commit_sha: ${{ github.sha }}
+      #     git_tag_prefix: "v"
