@@ -44,7 +44,7 @@ jobs:
           (cd ./configs/${{ inputs.repository_name }}/overlays/prod/ && kustomize edit set image IMAGENAME=ghcr.io/zebrainy/${{ inputs.repository_name }}:${{ env.VERSION }})
      
       - name: Push to DEV branch
-        uses: github-actions-x/commit@v2.8
+        uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           push-branch: 'dev'
