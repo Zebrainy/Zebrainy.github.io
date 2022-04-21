@@ -6,9 +6,9 @@ on:
       repository_name:
         required: true
         type: string
-      secrets:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ORG_PERSONAL_ACCESS_TOKEN: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ORG_PERSONAL_ACCESS_TOKEN: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
 
 jobs:
   push_to_registry:
