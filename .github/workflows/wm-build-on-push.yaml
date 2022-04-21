@@ -7,9 +7,11 @@ on:
         required: true
         type: string
     secrets:
-      CI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      ORG_PERSONAL_ACCESS_TOKEN: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
-
+      CI_GITHUB_TOKEN:
+        required: true
+      ORG_PERSONAL_ACCESS_TOKEN:
+        required: true
+        
 jobs:
   push_to_registry:
     name: Build & upload to GitHub registry
