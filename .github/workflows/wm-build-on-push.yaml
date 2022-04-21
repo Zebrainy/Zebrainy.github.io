@@ -7,7 +7,7 @@ on:
         required: true
         type: string
     secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      CI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       ORG_PERSONAL_ACCESS_TOKEN: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.CI_GITHUB_TOKEN }}
           registry: ghcr.io
           repository: zebrainy/${{ inputs.repository_name }}
           tags: latest
