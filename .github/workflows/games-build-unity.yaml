@@ -1,0 +1,148 @@
+name: Reusable workflow - Build game - Unity
+
+on:
+  workflow_call:
+    inputs:
+      game_name:
+        required: true
+        type: string
+      GAME_NAME_RU:
+        required: true
+        type: string
+      CATALOG_GAME_ID:
+        required: true
+        type: string
+      DIRECTORY:
+        required: false
+        type: string
+        default: build/WebGL/WebGL
+      SLACK_CHANNEL:
+        required: false
+        type: string
+        default: ci_cd_games
+      version: 
+        required: false
+        type: string
+    secrets:
+      ZEBRAINY_UNITY_EMAIL:
+        required: true
+      ZEBRAINY_UNITY_PASSWORD:
+        required: true
+      ZEBRAINY_UNITY_SERIAL:
+        required: true
+      CI_CD_SLACK_TOKEN:
+        required: true
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+
+jobs:
+  build:
+    runs-on: [self-hosted, linux]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: disabling SplashScreen and SplashLogo
+        run: |
+          sed -i 's/m_ShowUnitySplashScreen: 1/m_ShowUnitySplashScreen: 0/' ProjectSettings/ProjectSettings.asset
+          sed -i 's/m_ShowUnitySplashLogo: 1/m_ShowUnitySplashLogo: 0/' ProjectSettings/ProjectSettings.asset
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      
+      - name: Install Yarn
+        run: npm i -g yarn
+
+      - name: Set the version from inputs
+        if: github.event.inputs.version != ''
+        run: echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+        
+      - name: Set the version from tag
+        if: ${{ env.VERSION == '' }}
+        run: echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3 | sed 's/^v-\?//g')" >> $GITHUB_ENV
+
+      - if: ${{ env.VERSION == '' }}
+        name: Check version existence
+        run: echo "version does not exist" && exit 1
+
+      - uses: game-ci/unity-builder@v2
+        name: Build WebGL
+        env:
+          UNITY_EMAIL: ${{ secrets.ZEBRAINY_UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.ZEBRAINY_UNITY_PASSWORD }}
+          UNITY_SERIAL: ${{ secrets.ZEBRAINY_UNITY_SERIAL }}
+        with:
+          targetPlatform: WebGL
+          unityVersion: 2021.1.0f1
+          allowDirtyBuild: true
+      
+      - name: Unity cleanup
+        run: mv ${{ inputs.DIRECTORY }} ./dist
+            
+      - name: Sound fix
+        run: |
+          sed -i "s/function _JS_Sound_SetListenerPosition(x,y,z){if(WEBAudio.audioWebEnabled==0)return;/function _JS_Sound_SetListenerPosition(x,y,z){return;/" ./dist/Build/*.framework.js
+          sed -i "s/function _JS_Sound_SetListenerOrientation(x,y,z,xUp,yUp,zUp){if(WEBAudio.audioWebEnabled==0)return;/function _JS_Sound_SetListenerOrientation(x,y,z,xUp,yUp,zUp){return;/" ./dist/Build/*.framework.js
+          sed -i "s/function _JS_Sound_SetPosition(channelInstance,x,y,z){if(WEBAudio.audioWebEnabled==0)return;/function _JS_Sound_SetPosition(channelInstance,x,y,z){return;/" ./dist/Build/*.framework.js
+          sed -i "s/function _JS_Sound_SetVolume(channelInstance,v){if(WEBAudio.audioWebEnabled==0)return;/function _JS_Sound_SetVolume(channelInstance,v){return;/" ./dist/Build/*.framework.js
+
+      - name: Install node dependencies
+        run: yarn add directory-tree@3.0.1
+
+      - name: Download manifest script 
+        run: curl https://zebrainy.github.io/scripts/manifest.js > manifest.js
+      
+      - name: Generate manifest
+        run: node manifest dist ${{ inputs.game_name }} ${{ env.VERSION }}
+      
+      - name: Archive
+        run: |
+          pushd dist
+          zip -r dist.zip *
+          popd
+        
+      - name: Prepare S3 upload
+        run: |
+          mkdir s3
+          mv dist/dist.zip s3/${{ env.VERSION }}.zip
+          mv dist s3/${{ env.VERSION }}
+      
+      - name: upload for test to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: test_build
+          path: s3/${{ env.VERSION }}
+          retention-days: 1
+
+        
+      # - name: Upload archive to S3 AWS
+      #   uses: jakejarvis/s3-sync-action@master
+      #   with:
+      #     args: --acl public-read --follow-symlinks
+      #   env:
+      #     SOURCE_DIR: 's3'
+      #     DEST_DIR: 'web-games/bundles/${{ inputs.game_name }}'
+      #     AWS_S3_BUCKET: web-bundles
+      #     AWS_REGION: 'us-east-2'
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      # - name: Create build metadata in Squidex
+      #   run: |
+      #     curl https://zebrainy.github.io/scripts/squidex_create_build.sh > squidex.sh
+      #     chmod +x ./squidex.sh
+      #     ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}"
+      #   env:
+      #     WEBGAME_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
+
+      - name: Send URLs to slack
+        uses: archive/github-actions-slack@v1.0.3
+        with:
+          slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
+          slack-channel: ${{inputs.SLACK_CHANNEL}}
+          slack-text: |
+            :jigsaw: *${{ inputs.game_name }}* *${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.GAME_NAME_RU }}>) 
+            <https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
