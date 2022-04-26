@@ -63,7 +63,7 @@ jobs:
           
       - name: Kustomize 
         run: |
-          (cd ./configs/${{ inputs.repository_name }}/overlays/prod/ && kustomize edit set image IMAGENAME=ghcr.io/zebrainy/${{ inputs.repository_name }}:${{ env.VERSION }})
+          (cd ./deployments/${{ inputs.repository_name }}/ && kustomize edit set image IMAGENAME=ghcr.io/zebrainy/${{ inputs.repository_name }}:${{ env.VERSION }})
             
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
