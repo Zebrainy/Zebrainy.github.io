@@ -28,11 +28,15 @@ jobs:
           registry: ghcr.io
           repository: zebrainy/${{ inputs.repository_name }}
           tags: latest
+      
+      - name: package-version
+        run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
 
       - name: Tag new version
-        uses: pkgdeps/action-package-version-to-git-tag@v1.5.0
+        uses: pkgdeps/action-package-version-to-git-tag@v2
         with:
           github_token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           github_repo: ${{ github.repository }}
+          version: ${{ env.PACKAGE_VERSION }}
           git_commit_sha: ${{ github.sha }}
           git_tag_prefix: "v"
