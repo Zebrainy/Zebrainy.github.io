@@ -210,12 +210,12 @@
     ],
     "magicPaint": [
         "u3g3-mosaic",
-        "maze"
+        "maze",
         "u1g5-kitties"
     ],
     "u0g5-zebra-home": [
         "u3g3-mosaic",
-        "maze"
+        "maze",
         "u1g5-kitties",
         "cs:AnimalPuzzle"
     ]
