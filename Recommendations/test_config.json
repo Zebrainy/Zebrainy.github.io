@@ -200,6 +200,7 @@
         "u1g1-zebra-chef"
     ],
     "Maths": [
+        "u0g5-zebra-home",
         "reading",
         "dig",
         "u3g7-apples",
@@ -211,5 +212,11 @@
         "u3g3-mosaic",
         "maze"
         "u1g5-kitties"
+    ],
+    "u0g5-zebra-home": [
+        "u3g3-mosaic",
+        "maze"
+        "u1g5-kitties",
+        "cs:AnimalPuzzle"
     ]
 }
