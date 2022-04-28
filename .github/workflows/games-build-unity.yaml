@@ -110,33 +110,25 @@ jobs:
           mv dist/dist.zip s3/${{ env.VERSION }}.zip
           mv dist s3/${{ env.VERSION }}
       
-      - name: upload for test to artifacts
-        uses: actions/upload-artifact@v3
+      - name: Upload archive to S3 AWS
+        uses: jakejarvis/s3-sync-action@master
         with:
-          name: test_build
-          path: s3/${{ env.VERSION }}
-          retention-days: 1
+          args: --acl public-read --follow-symlinks
+        env:
+          SOURCE_DIR: 's3'
+          DEST_DIR: 'web-games/bundles/${{ inputs.game_name }}'
+          AWS_S3_BUCKET: web-bundles
+          AWS_REGION: 'us-east-2'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-        
-      # - name: Upload archive to S3 AWS
-      #   uses: jakejarvis/s3-sync-action@master
-      #   with:
-      #     args: --acl public-read --follow-symlinks
-      #   env:
-      #     SOURCE_DIR: 's3'
-      #     DEST_DIR: 'web-games/bundles/${{ inputs.game_name }}'
-      #     AWS_S3_BUCKET: web-bundles
-      #     AWS_REGION: 'us-east-2'
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      # - name: Create build metadata in Squidex
-      #   run: |
-      #     curl https://zebrainy.github.io/scripts/squidex_create_build.sh > squidex.sh
-      #     chmod +x ./squidex.sh
-      #     ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}"
-      #   env:
-      #     WEBGAME_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
+      - name: Create build metadata in Squidex
+        run: |
+          curl https://zebrainy.github.io/scripts/squidex_create_build.sh > squidex.sh
+          chmod +x ./squidex.sh
+          ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}"
+        env:
+          WEBGAME_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
 
       - name: Send URLs to slack
         uses: archive/github-actions-slack@v1.0.3

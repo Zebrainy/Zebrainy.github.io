@@ -1,0 +1,164 @@
+name: Reusable workflow - Build game - Cocos
+
+on:
+  workflow_call:
+    inputs:
+      game_name:
+        required: true
+        type: string
+      GAME_NAME_RU:
+        required: true
+        type: string
+      CATALOG_GAME_ID:
+        required: true
+        type: string
+      COCOS_VERSION:
+        required: false
+        type: string
+        default: 3.3.2
+      SLACK_CHANNEL:
+        required: false
+        type: string
+        default: ci_cd_games
+      version: 
+        required: false
+        type: string
+    secrets:
+      CI_CD_SLACK_TOKEN:
+        required: true
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Download single file from AWS
+        uses: Jnqa/selectel-s3-sync@aws-v1
+        with:
+          dirname: download
+          bucketname: web-bundles
+          s3dirname: programs/cocos-creator
+          FILENAME: cocos-v${{ inputs.COCOS_VERSION }}.zip
+          DOWNLOAD: true
+          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          REGION: us-east-2
+
+      - name: Unzip cocos
+        run: unzip ./download/*.zip -d cocos
+
+      - name: Build
+        if: github.event.inputs.use-config == 'true'
+        id: build
+        run: |
+          powershell ".\cocos\CocosCreator.exe --project . --build 'configPath=.\build-config.json' --force | Out-Null" || true
+
+      - name: Build without config
+        if: github.event.inputs.use-config != 'true'
+        run: |
+          powershell ".\cocos\CocosCreator.exe --project . --build platform='web-mobile;debug=true' --force | Out-Null" || true
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-files
+          path: |
+            build/web-mobile
+          retention-days: 1
+
+  upload:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build-files
+          path: build
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      
+      - name: Install Yarn
+        run: npm i -g yarn
+
+      - name: Set the version from inputs
+        if: github.event.inputs.version != ''
+        run: echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+        
+      - name: Set the version from tag
+        if: ${{ env.VERSION == '' }}
+        run: echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3 | sed 's/^v-\?//g')" >> $GITHUB_ENV
+
+      - if: ${{ env.VERSION == '' }}
+        name: Check version existence
+        run: echo "version does not exist" && exit 1
+      
+      - name: Install node dependencies
+        run: yarn add directory-tree@3.0.1
+
+      - name: disabling SplashScreen and SplashLogo
+        run: |
+          sed -i 's/"displayWatermark":true,/"displayWatermark":false,/' ./build/src/settings.json || echo "something wrong"
+          sed -i 's/"displayRatio":0.4,/"displayRatio":0.0,/' ./build/src/settings.json || echo "something wrong"
+
+      - name: Download manifest script 
+        run: curl https://gist.githubusercontent.com/zlumer/3995370ec66c7ce374b312a8bd036225/raw/manifest.js?r=$RANDOM > manifest.js
+      
+      - name: Generate manifest
+        run: node manifest build ${{ inputs.game_name }} ${{ env.VERSION }}
+      
+      - name: Archive
+        run: |
+          pushd build
+          zip -r build.zip *
+          popd
+        
+      - name: Prepare S3 upload
+        run: |
+          mkdir s3
+          mv build/build.zip s3/${{ env.VERSION }}.zip
+          mv build s3/${{ env.VERSION }}
+        
+      - name: Upload archive to S3 AWS
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks
+        env:
+          SOURCE_DIR: 's3'
+          DEST_DIR: 'web-games/bundles/${{ inputs.game_name }}'
+          AWS_S3_BUCKET: web-bundles
+          AWS_REGION: 'us-east-2'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      # - name: Create build metadata in Squidex
+      #   run: |
+      #     curl https://gist.githubusercontent.com/zlumer/fa3d03e0507c6699ec86dede754d8d37/raw/squidex_create_build.sh?r=$RANDOM > squidex.sh
+      #     chmod +x ./squidex.sh
+      #     ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}"
+      #   env:
+      #     WEBGAME_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
+      
+      - name: Add debug label
+        if: github.event.inputs.debug == 'true'
+        run: echo "DEBUG_INFO=🧪[Debug Build]" >> $GITHUB_ENV
+
+      - name: Send URLs to slack
+        uses: archive/github-actions-slack@v1.0.3
+        with:
+          slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
+          slack-channel: ${{inputs.SLACK_CHANNEL}}
+          slack-text: |
+            :sparkle: *${{ inputs.game_name }}* *${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.GAME_NAME_RU }}>) ${{ env.DEBUG_INFO }}
+            <https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
