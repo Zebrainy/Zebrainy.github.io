@@ -62,7 +62,7 @@ jobs:
       - name: Build without config
         if: github.event.inputs.use-config != 'true'
         run: |
-          powershell ".\cocos\CocosCreator.exe --project . --build platform='web-mobile;debug=true' --force | Out-Null" || true
+          powershell ".\cocos\CocosCreator.exe --project . --build platform='web-mobile;debug=${{ github.event.inputs.debug }}' --force | Out-Null" || true
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
@@ -142,13 +142,13 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      # - name: Create build metadata in Squidex
-      #   run: |
-      #     curl https://gist.githubusercontent.com/zlumer/fa3d03e0507c6699ec86dede754d8d37/raw/squidex_create_build.sh?r=$RANDOM > squidex.sh
-      #     chmod +x ./squidex.sh
-      #     ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}"
-      #   env:
-      #     WEBGAME_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
+      - name: Create build metadata in Squidex
+        run: |
+          curl https://gist.githubusercontent.com/zlumer/fa3d03e0507c6699ec86dede754d8d37/raw/squidex_create_build.sh?r=$RANDOM > squidex.sh
+          chmod +x ./squidex.sh
+          ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}"
+        env:
+          WEBGAME_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
       
       - name: Add debug label
         if: github.event.inputs.debug == 'true'
@@ -160,5 +160,5 @@ jobs:
           slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
           slack-channel: ${{inputs.SLACK_CHANNEL}}
           slack-text: |
-            :sparkle: *${{ inputs.game_name }}* *${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.GAME_NAME_RU }}>) ${{ env.DEBUG_INFO }}
+            :jigsaw: *${{ inputs.game_name }}* *${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.GAME_NAME_RU }}>) ${{ env.DEBUG_INFO }}
             <https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
