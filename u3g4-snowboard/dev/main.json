@@ -1,0 +1,45 @@
+{
+  "Levels": [
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/620626a811acaaa1df2d0f4e0cd2f407/raw/snb_lvl_1.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/9dfb0a389676b32961bf69ace371cb3d/raw/snb_lvl_2.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/9976ed43dd3c806f74abfa14738845ef/raw/snb_lvl_3.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/3364435be524f101605d02e430319c77/raw/snb_lvl_4.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/c3bf71d2c6b8bc61c0ff91a49f80c986/raw/snb_lvl_5.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/72831c49e7625771c82235b1d30a436f/raw/snb_lvl_6.json",
+      "ExcludeRepeat": false
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/89b149236ed700293610bae24015df42/raw/snb_lvl_7.json",
+      "ExcludeRepeat": false
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/f1d2f36bac9d160d85cd0cae9b8968f0/raw/snb_lvl_8.json",
+      "ExcludeRepeat": false
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/e20fe58ad43c2e5d9d3302580ddc8cad/raw/snb_lvl_9.json",
+      "ExcludeRepeat": false
+    },
+    {
+      "Url": "https://gist.githubusercontent.com/Zoxan/c722aade379942ddf26ee9548da4f6fd/raw/snb_lvl_10.json",
+      "ExcludeRepeat": false
+    }
+  ],
+  "TestLevel": ""
+}
