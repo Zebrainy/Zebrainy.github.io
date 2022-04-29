@@ -1,0 +1,12 @@
+{
+    "FruitsCount": 20,
+    "TutorialFruitsCount": 3,
+    "SpiderChance": 0.15,
+    "ItemShowDelayMin": 0.1,
+    "ItemShowDelayMax": 0.9,
+    "ReactionLimitMin": 0.5,
+    "ReactionLimitMax": 3,
+    "BaseReactionTimeMin": 1,
+    "BaseReactionTimeMax": 1.2,
+    "ReactionTimeFactor": -2
+  }
