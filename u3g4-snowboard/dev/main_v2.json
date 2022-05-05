@@ -1,0 +1,45 @@
+{
+  "Levels": [
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_1.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_2.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_3.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_4.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_5.json",
+      "ExcludeRepeat": true
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_6.json",
+      "ExcludeRepeat": false
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_7.json",
+      "ExcludeRepeat": false
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_8.json",
+      "ExcludeRepeat": false
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_9.json",
+      "ExcludeRepeat": false
+    },
+    {
+      "Url": "/cache/github-configs/u3g4-snowboard/dev/lvl_10.json",
+      "ExcludeRepeat": false
+    }
+  ],
+  "TestLevel": ""
+}
