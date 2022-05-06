@@ -113,7 +113,7 @@ jobs:
           sed -i 's/"displayRatio":0.4,/"displayRatio":0.0,/' ./build/src/settings.json || echo "something wrong"
 
       - name: Download manifest script 
-        run: curl https://gist.githubusercontent.com/zlumer/3995370ec66c7ce374b312a8bd036225/raw/manifest.js?r=$RANDOM > manifest.js
+        run: curl https://zebrainy.github.io/scripts/manifest.js > manifest.js
       
       - name: Generate manifest
         run: node manifest build ${{ inputs.game_name }} ${{ env.VERSION }}
@@ -144,7 +144,7 @@ jobs:
 
       - name: Create build metadata in Squidex
         run: |
-          curl https://gist.githubusercontent.com/zlumer/fa3d03e0507c6699ec86dede754d8d37/raw/squidex_create_build.sh?r=$RANDOM > squidex.sh
+          curl https://zebrainy.github.io/scripts/squidex_create_build.sh > squidex.sh
           chmod +x ./squidex.sh
           ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}"
         env:
