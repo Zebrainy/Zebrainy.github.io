@@ -37,7 +37,7 @@ on:
       AWS_SECRET_ACCESS_KEY:
         required: true
       squidex_client_secret:
-        required: true
+        required: false
 
 jobs:
   build-game:
