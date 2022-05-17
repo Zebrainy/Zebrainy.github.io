@@ -1,0 +1,134 @@
+name: Reusable workflow - Build tagged WebView-bundle version
+
+on:
+  workflow_call:
+    inputs:
+      bundle_name:
+        required: true
+        type: string
+      squidex_bundle_name:
+        required: true
+        type: string    
+      SQUIDEX_CLIENT_VERSION_ID: 
+        required: true
+        type: string
+      build_command:
+        required: false
+        type: string
+        default: ci:build
+      SLACK_CHANNEL:
+        required: false
+        type: string
+        default: ci_cd
+      slack_icon:
+        required: false
+        type: string
+        default: ':female-office-worker:'
+      slack_name:
+        required: false
+        type: string
+        default: 'Название не указано'
+    secrets:
+      ORG_PERSONAL_ACCESS_TOKEN:
+        required: true
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+      squidex_client_secret:
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get the version
+        run: echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3 | sed 's/^v-\?//g')" >> $GITHUB_ENV
+
+      - if: ${{ env.VERSION == '' }}
+        name: check version existence
+        run: echo "version is not exists" && exit 1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build project
+        run: yarn ${{ inputs.build_command }}
+
+      - name: Install node dependencies
+        run: yarn add directory-tree
+
+      - name: Download manifest script 
+        run: curl https://zebrainy.github.io/scripts/manifest.js > manifest.js
+
+      - name: Generate manifest
+        run: node manifest dist ${{ inputs.bundle_name }} ${{ env.VERSION }}
+
+      - name: Archive
+        run: |
+          pushd dist
+          zip -r dist.zip *
+          popd
+
+      - name: Prepare S3 upload
+        run: |
+          mkdir s3
+          mv dist/dist.zip s3/${{ env.VERSION }}.zip
+          mv dist s3/${{ env.VERSION }}
+
+      - name: Upload archive to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks
+        env:
+          SOURCE_DIR: 's3'
+          DEST_DIR: 'web-bundles/bundles/${{ inputs.bundle_name }}'
+          AWS_S3_BUCKET: web-bundles
+          AWS_REGION: 'us-east-2'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Print URLs
+        run: |
+          echo AWS:
+          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html"
+          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip"
+      
+      - name: Create build metadata in Squidex
+        run: |
+          curl https://zebrainy.github.io/scripts/squidex_web_bundle_build.sh > squidex.sh
+          chmod +x ./squidex.sh
+          SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
+          ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.bundle_name }}" "${{ env.VERSION }}" "${{ env.BUNDLE_BUILD_URL }}" "${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}" "${{ inputs.squidex_bundle_name }}" 
+        env:
+          BUNDLE_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip
+
+      - name: Send URLs to slack
+        uses: archive/github-actions-slack@v1.0.3
+        with:
+          slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
+          slack-channel: ${{inputs.SLACK_CHANNEL}}
+          slack-text: |
+            ${{ inputs.slack_icon }} *${{ inputs.slack_name }} ${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
+            <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса>
+
