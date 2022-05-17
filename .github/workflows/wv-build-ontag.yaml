@@ -119,7 +119,7 @@ jobs:
           curl https://zebrainy.github.io/scripts/squidex_web_bundle_build.sh > squidex.sh
           chmod +x ./squidex.sh
           SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
-          ./squidex.sh "${{ secrets.WEB_GAME_SQUIDEX_TOKEN }}" "${{ inputs.bundle_name }}" "${{ env.VERSION }}" "${{ env.BUNDLE_BUILD_URL }}" "${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}" "${{ inputs.squidex_bundle_name }}" 
+          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.bundle_name }}" "${{ env.VERSION }}" "${{ env.BUNDLE_BUILD_URL }}" "${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}" "${{ inputs.squidex_bundle_name }}" 
         env:
           BUNDLE_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip
 
