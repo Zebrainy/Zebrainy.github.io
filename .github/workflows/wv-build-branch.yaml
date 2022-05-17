@@ -80,5 +80,5 @@ jobs:
       - name: Print URLs
         run: |
           echo AWS:
-          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}//branches/latest/index.html"
-          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}//branches/latest.zip"
+          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest/index.html"
+          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest.zip"
