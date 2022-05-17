@@ -37,6 +37,8 @@ on:
         required: true
       squidex_client_secret:
         required: true
+      CI_CD_SLACK_TOKEN:
+        required: true
 
 jobs:
   build:
@@ -127,13 +129,9 @@ jobs:
         uses: archive/github-actions-slack@v2.4.0
         with:
           slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
-          # slack-channel: ${{inputs.SLACK_CHANNEL}}
-          slack-channel: ci_cd_jnqa_test
+          slack-channel: ${{ inputs.SLACK_CHANNEL }}
+          slack-optional-icon_emoji: ":${{ inputs.slack_icon }}:"
           slack-text: |
-            Поиск проблемы
-            Проблема в тексте?
-          # slack-optional-icon_emoji: ":${{ inputs.slack_icon }}:"
-          # slack-text: |
-          #   :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
-          #   <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса>
+            :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
+            <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса>
 
