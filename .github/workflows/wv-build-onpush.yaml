@@ -10,6 +10,10 @@ on:
         required: false
         type: string
         default: ci:build
+      custom_tag:
+        required: false
+        type: string
+        default: v
     secrets:
       ORG_PERSONAL_ACCESS_TOKEN:
         required: true
@@ -85,4 +89,4 @@ jobs:
           github_token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           github_repo: ${{ github.repository }}
           git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v"
+          git_tag_prefix: "${{ inputs.custom_tag }}"

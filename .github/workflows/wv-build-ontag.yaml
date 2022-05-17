@@ -130,8 +130,16 @@ jobs:
         with:
           slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
           slack-channel: ${{ inputs.SLACK_CHANNEL }}
-          slack-optional-icon_emoji: ":${{ inputs.slack_icon }}:"
+          # slack-optional-icon_emoji: ":${{ inputs.slack_icon }}:"
           slack-text: |
             :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
             <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса>
 
+      - name: upload bundle
+        uses: actions/upload-artifact@v2.2.0
+        with:
+          # A file, directory or wildcard pattern that describes what to upload
+          path: 's3'
+          # Artifact name
+          name: bundle
+          retention-days: 1
