@@ -378,5 +378,14 @@
         "lg-constructor-cocos",
         "maze",
         "lg-match-one"
+    ],
+    "u0g5-zebra-home": [
+        "dig",
+        "lg-puzzleshapes",
+        "maze",
+        "u3g8-blocks",
+        "u3g6-dots",
+        "u3g2-magicpaint",
+        "magicPaint"
     ]
 }
