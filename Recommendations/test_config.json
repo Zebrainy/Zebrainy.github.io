@@ -224,5 +224,10 @@
         "u3g3-mosaic",
         "maze",
         "u1g5-kitties"
+    ],
+     "blocks": [
+        "u3g3-mosaic",
+        "maze",
+        "u1g5-kitties"
     ]
 }
