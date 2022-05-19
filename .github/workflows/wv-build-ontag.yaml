@@ -124,6 +124,12 @@ jobs:
           ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.bundle_name }}" "${{ env.VERSION }}" "${{ env.BUNDLE_BUILD_URL }}" "${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}" "${{ inputs.squidex_bundle_name }}" 
         env:
           BUNDLE_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip
+          
+      - name: Clear version tag
+        continue-on-error: true
+        run: |
+          clean_version=$(echo ${{ env.VERSION }} | rev | cut -d "-" -f 1 | rev)
+          echo VERSION=$clean_version >> $GITHUB_ENV
 
       - name: Send URLs to slack
         uses: archive/github-actions-slack@v2.4.0
