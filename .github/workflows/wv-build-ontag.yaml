@@ -98,17 +98,15 @@ jobs:
           mv dist/dist.zip s3/${{ env.VERSION }}.zip
           mv dist s3/${{ env.VERSION }}
 
-      - name: Upload archive to S3
-        uses: jakejarvis/s3-sync-action@master
+      - name: Upload to S3 AWS
+        uses: Zebrainy/s3-sync-action@v2
         with:
-          args: --acl public-read --follow-symlinks
-        env:
-          SOURCE_DIR: 's3'
-          DEST_DIR: 'web-bundles/bundles/${{ inputs.bundle_name }}'
-          AWS_S3_BUCKET: web-bundles
-          AWS_REGION: 'us-east-2'
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          dirname: s3
+          s3dirname: web-bundles/bundles/${{ inputs.bundle_name }}
+          bucketname: web-bundles
+          REGION: us-east-2
+          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Print URLs
         run: |
