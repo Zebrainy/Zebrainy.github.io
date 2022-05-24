@@ -36,7 +36,7 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
   "zip":{"iv":"'$4'"},
   "zipSize":{"iv":"'$7'"},
   "buildDate":{"iv":"'$TIME_NOW'"}
-}' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build/?publish=true' > squidex-output.json
+}' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build-test/?publish=true' > squidex-output.json
 
 BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
 
@@ -49,6 +49,6 @@ if [ -z "$6" ]; then
         exit 0
 fi
 
-curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
-  "'$6'":{"iv":["'$BUILD_ID'"]}
-}' 'https://prod.zebr-a.com/squidex/tools/draft/client-versions/'$5'/patch'
+# curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
+#   "'$6'":{"iv":["'$BUILD_ID'"]}
+# }' 'https://prod.zebr-a.com/squidex/tools/draft/client-versions/'$5'/patch'

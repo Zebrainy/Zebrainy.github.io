@@ -35,7 +35,7 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
   "url":{"iv":"'$4'"},
   "zipSize":{"iv":"'$6'"},
   "buildDate":{"iv":"'$TIME_NOW'"}
-}' 'https://cloud.squidex.io/api/content/skazbuka/web-game-build/?publish=true' > squidex-output.json
+}' 'https://cloud.squidex.io/api/content/skazbuka/web-game-build-test/?publish=true' > squidex-output.json
 
 BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
 
@@ -46,6 +46,6 @@ fi
 
 echo "build id: $BUILD_ID"
 
-curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
-  "build":{"iv":["'$BUILD_ID'"]}
-}' 'https://prod.zebr-a.com/squidex/tools/draft/catalog-game/'$5'/patch'
+# curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
+#   "build":{"iv":["'$BUILD_ID'"]}
+# }' 'https://prod.zebr-a.com/squidex/tools/draft/catalog-game/'$5'/patch'
