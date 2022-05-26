@@ -65,6 +65,7 @@
         "u3g3-mosaic"
     ],
     "lg-puzzleshapes": [
+        "puzzleshapes",
         "u3g3-mosaic",
         "u2g10-mirror",
         "u1g5-kitties"
@@ -229,5 +230,10 @@
         "u3g3-mosaic",
         "maze",
         "u1g5-kitties"
+    ],
+    "puzzleshapes": [
+        "lg-puzzleshapes",
+        "dig",
+        "cs:AnimalPuzzle"
     ]
 }
