@@ -127,7 +127,7 @@ jobs:
 
       - name: Create build metadata in Squidex
         run: |
-          curl https://zebrainy.github.io/scripts/squidex_create_build-test.sh > squidex.sh
+          curl https://zebrainy.github.io/scripts/squidex_create_build.sh > squidex.sh
           chmod +x ./squidex.sh
           SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
           ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}" "${{ env.ZIPSIZE }}"
