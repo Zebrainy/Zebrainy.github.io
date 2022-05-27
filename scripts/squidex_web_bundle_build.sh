@@ -49,6 +49,8 @@ if [ -z "$6" ]; then
         exit 0
 fi
 
+echo "build id: $BUILD_ID"
+
 curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
   "'$6'":{"iv":["'$BUILD_ID'"]}
 }' 'https://prod.zebr-a.com/squidex/tools/draft/client-versions/'$5'/patch'
