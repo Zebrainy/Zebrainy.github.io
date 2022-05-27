@@ -49,10 +49,6 @@ if [ -z "$6" ]; then
         exit 0
 fi
 
-if [ $BUILD_ID == "null" ]; then
-        echo "build id: $BUILD_ID, exiting"
-        exit 0
-fi
 echo "build id: $BUILD_ID"
 
 curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
