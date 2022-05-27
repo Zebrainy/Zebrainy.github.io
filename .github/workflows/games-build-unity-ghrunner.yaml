@@ -109,8 +109,6 @@ jobs:
       - name: Prepare S3 upload
         run: |
           mkdir s3
-          zipSize=$(stat --printf="%s" dist/dist.zip)
-          echo "ZIPSIZE=$zipSize" >> $GITHUB_ENV
           mv dist/dist.zip s3/${{ env.VERSION }}.zip
           mv dist s3/${{ env.VERSION }}
       
@@ -130,7 +128,7 @@ jobs:
           curl https://zebrainy.github.io/scripts/squidex_create_build.sh > squidex.sh
           chmod +x ./squidex.sh
           SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
-          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}" "${{ env.ZIPSIZE }}"
+          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}"
         env:
           WEBGAME_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
 
