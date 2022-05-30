@@ -5,6 +5,7 @@ echo "version: $3"
 echo "current time: $TIME_NOW"
 echo "build url: $4"
 echo "catalog-game id: $5"
+echo "zipSize: $6"
 
 if [ -z "$1" ]; then
         echo "Squidex token not provided"
@@ -32,6 +33,7 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
   "gameId":{"iv":"'$2'"},
   "version":{"iv":"'$3'"},
   "url":{"iv":"'$4'"},
+  "zipSize":{"iv":"'$6'"},
   "buildDate":{"iv":"'$TIME_NOW'"}
 }' 'https://cloud.squidex.io/api/content/skazbuka/web-game-build/?publish=true' > squidex-output.json
 
