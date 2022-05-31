@@ -6,7 +6,7 @@ echo "current time: '$TIME_NOW'"
 echo "build url: '$4'"
 echo "client-version id: '$5'"
 echo "bundle type: '$6'"
-echo "zipSize: '$7'"
+# echo "zipSize: '$7'"
 
 if [ -z "$1" ]; then
         echo "Squidex token not provided"
