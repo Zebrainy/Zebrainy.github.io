@@ -43,6 +43,10 @@ echo "BUILD_ID: $BUILD_ID"
 Response="$(cat squidex-output.json)"
 echo "Response: $Response"
 
+if [ "$BUILD_ID" == "null" ]; then
+        echo "BUILD_ID is null"
+        exit 1
+
 if [ -z "$5" ]; then
         echo "client-version id not provided, exiting"
         exit 0
