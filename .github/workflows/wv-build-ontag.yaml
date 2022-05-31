@@ -101,8 +101,9 @@ jobs:
       - name: Prepare S3 upload
         run: |
           mkdir s3
-          # zipSize=$(stat --printf="%s" dist/dist.zip)
-          # echo "ZIPSIZE=$zipSize" >> $GITHUB_ENV
+          zipSize=$(stat --printf="%s" dist/dist.zip)
+          echo "ZIPSIZE=$zipSize" >> $GITHUB_ENV
+          echo "ArchiveSize: $zipSize"
           mv dist/dist.zip s3/${{ env.VERSION }}.zip
           mv dist s3/${{ env.VERSION }}
 
