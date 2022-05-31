@@ -34,7 +34,6 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
   "name":{"iv":"'$2'"},
   "version":{"iv":"'$3'"},
   "zip":{"iv":"'$4'"},
-  "zipSize":{"iv":"'$7'"},
   "buildDate":{"iv":"'$TIME_NOW'"}
 }' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build-test/?publish=true' > squidex-output.json
 
