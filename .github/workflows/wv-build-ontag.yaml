@@ -29,7 +29,8 @@ on:
         type: string
         default: 'Название не указано'
       VERSION:
-        required: false
+        required: true
+        type: string
     secrets:
       ORG_PERSONAL_ACCESS_TOKEN:
         required: true
