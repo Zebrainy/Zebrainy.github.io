@@ -52,6 +52,9 @@ jobs:
       # - name: Get the version
       #   run: echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3 | sed 's/^v-\?//g')" >> $GITHUB_ENV
 
+      - name: Get the version from inputs # remove
+        run: echo "VERSION=${{ inputs.VERSION }}" >> $GITHUB_ENV
+
       - if: ${{ env.VERSION == '' }}
         name: check version existence
         run: echo "version is not exists" && exit 1
