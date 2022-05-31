@@ -28,6 +28,8 @@ on:
         required: false
         type: string
         default: 'Название не указано'
+      VERSION:
+        required: false
     secrets:
       ORG_PERSONAL_ACCESS_TOKEN:
         required: true
@@ -47,8 +49,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Get the version
-        run: echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3 | sed 's/^v-\?//g')" >> $GITHUB_ENV
+      # - name: Get the version
+      #   run: echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3 | sed 's/^v-\?//g')" >> $GITHUB_ENV
 
       - if: ${{ env.VERSION == '' }}
         name: check version existence
