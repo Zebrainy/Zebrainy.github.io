@@ -1,11 +1,11 @@
 #!/bin/bash
 TIME_NOW="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-echo "web-bundle: '$2'"
-echo "version: '$3'"
-echo "current time: '$TIME_NOW'"
-echo "build url: '$4'"
-echo "client-version id: '$5'"
-echo "bundle type: '$6'"
+echo "web-bundle: $2"
+echo "version: $3"
+echo "current time: $TIME_NOW"
+echo "build url: $4"
+echo "client-version id: $5"
+echo "bundle type: $6"
 
 if [ -z "$1" ]; then
         echo "Squidex token not provided"
@@ -37,6 +37,7 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
 }' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build-test/?publish=true' > squidex-output.json
 
 BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
+
 echo "BUILD_ID: $BUILD_ID"
 Response="$(cat squidex-output.json)"
 echo "Response: $Response"
