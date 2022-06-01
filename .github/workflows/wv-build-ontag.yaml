@@ -123,6 +123,16 @@ jobs:
           echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html"
           echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip"
       
+      - name: Vars checkout
+        run: |
+          echo "bundle name: ${{ inputs.bundle_name }}" 
+          echo "version: ${{ env.VERSION }}" 
+          echo "bundle url: ${{ env.BUNDLE_BUILD_URL }}"
+          echo "squidex id: ${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}"
+          echo "squidex_bundle_name: ${{ inputs.squidex_bundle_name }}" 
+        env:
+          BUNDLE_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip  
+
       - name: Create build metadata in Squidex
         run: |
           curl https://zebrainy.github.io/scripts/squidex_web_bundle_build-test.sh > squidex.sh
