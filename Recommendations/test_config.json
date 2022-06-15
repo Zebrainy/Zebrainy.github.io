@@ -232,5 +232,13 @@
         "u3g3-mosaic",
         "maze",
         "u1g5-kitties"
+    ],
+    "puzzleshapes": [
+        "u3g3-mosaic",
+        "maze",
+        "u1g5-kitties",
+        "lg-puzzleshapes",
+        "dig",
+        "cs:AnimalPuzzle"
     ]
 }
