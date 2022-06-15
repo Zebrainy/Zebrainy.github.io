@@ -6,6 +6,7 @@ echo "current time: $TIME_NOW"
 echo "build url: $4"
 echo "client-version id: $5"
 echo "bundle type: $6"
+echo "zipSize: $7"
 
 if [ -z "$1" ]; then
         echo "Squidex token not provided"
@@ -33,7 +34,8 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
   "name":{"iv":"'$2'"},
   "version":{"iv":"'$3'"},
   "zip":{"iv":"'$4'"},
-  "buildDate":{"iv":"'$TIME_NOW'"}
+  "buildDate":{"iv":"'$TIME_NOW'"},
+  "zipSize":{"iv":"'$7'"}
 }' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build/?publish=true' > squidex-output.json
 
 BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
