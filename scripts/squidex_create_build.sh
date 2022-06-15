@@ -38,6 +38,24 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
 }' 'https://cloud.squidex.io/api/content/skazbuka/web-game-build/?publish=true' > squidex-output.json
 
 BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
+echo "BUILD_ID: $BUILD_ID"
+Response="$(cat squidex-output.json)"
+echo "Response: $Response"
+
+if [ $BUILD_ID == "null" ]; then
+        echo "Build_ID error. Curl without zipSize"
+        curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
+        "gameId":{"iv":"'$2'"},
+        "version":{"iv":"'$3'"},
+        "url":{"iv":"'$4'"},
+        "buildDate":{"iv":"'$TIME_NOW'"}
+        }' 'https://cloud.squidex.io/api/content/skazbuka/web-game-build/?publish=true' > squidex-output.json
+        BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
+        echo "BUILD_ID: $BUILD_ID"
+        Response="$(cat squidex-output.json)"
+        echo "Response: $Response"               
+fi
+
 
 if [ -z "$5" ]; then
         echo "catalog-game id not provided, exiting"
