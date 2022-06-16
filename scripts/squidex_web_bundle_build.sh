@@ -35,7 +35,7 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
   "version":{"iv":"'$3'"},
   "zip":{"iv":"'$4'"},
   "buildDate":{"iv":"'$TIME_NOW'"},
-  "ZipSize":{"iv":"'$7'"}
+  "zipSize":{"iv":"'$7'"}
 }' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build/?publish=true' > squidex-output.json
 
 BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
