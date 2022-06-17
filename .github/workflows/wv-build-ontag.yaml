@@ -56,7 +56,6 @@ jobs:
       
       # Clean version is version without letters
       - name: Clear version tag
-        continue-on-error: true
         run: |
           clean_version=$(echo ${{ env.VERSION }} | rev | cut -d "-" -f 1 | rev | sed 's/^v-\?//g')
           echo VERSION_CLEAN=$clean_version >> $GITHUB_ENV
