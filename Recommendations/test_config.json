@@ -251,5 +251,13 @@
         "u2g10-mirror",
         "u3g6-dots",
         "dots"
+    ],
+    "meta-game": [
+        "dig",
+        "maze",
+        "magicPaint",
+        "reading",
+        "cs:AnimalPuzzle",
+        "u0g5-zebra-home"
     ]
 }
