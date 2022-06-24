@@ -5,6 +5,7 @@ echo "version: $3"
 echo "current time: $TIME_NOW"
 echo "build url: $4"
 echo "catalog-game id: $5"
+echo "zipSize: $6"
 
 if [ -z "$1" ]; then
         echo "Squidex token not provided"
@@ -32,10 +33,29 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
   "gameId":{"iv":"'$2'"},
   "version":{"iv":"'$3'"},
   "url":{"iv":"'$4'"},
-  "buildDate":{"iv":"'$TIME_NOW'"}
+  "buildDate":{"iv":"'$TIME_NOW'"},
+  "zipSize":{"iv":"'$6'"}
 }' 'https://cloud.squidex.io/api/content/skazbuka/web-game-build/?publish=true' > squidex-output.json
 
 BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
+echo "BUILD_ID: $BUILD_ID"
+Response="$(cat squidex-output.json)"
+echo "Response: $Response"
+
+if [ $BUILD_ID == "null" ]; then
+        echo "Build_ID error. Curl without zipSize"
+        curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
+        "gameId":{"iv":"'$2'"},
+        "version":{"iv":"'$3'"},
+        "url":{"iv":"'$4'"},
+        "buildDate":{"iv":"'$TIME_NOW'"}
+        }' 'https://cloud.squidex.io/api/content/skazbuka/web-game-build/?publish=true' > squidex-output.json
+        BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
+        echo "BUILD_ID: $BUILD_ID"
+        Response="$(cat squidex-output.json)"
+        echo "Response: $Response"               
+fi
+
 
 if [ -z "$5" ]; then
         echo "catalog-game id not provided, exiting"

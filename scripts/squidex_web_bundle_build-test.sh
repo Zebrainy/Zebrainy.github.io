@@ -6,6 +6,7 @@ echo "current time: $TIME_NOW"
 echo "build url: $4"
 echo "client-version id: $5"
 echo "bundle type: $6"
+echo "zipSize: $7"
 
 if [ -z "$1" ]; then
         echo "Squidex token not provided"
@@ -33,14 +34,29 @@ curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" 
   "name":{"iv":"'$2'"},
   "version":{"iv":"'$3'"},
   "zip":{"iv":"'$4'"},
-  "buildDate":{"iv":"'$TIME_NOW'"}
-}' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build-test/?publish=true' > squidex-output.json
+  "buildDate":{"iv":"'$TIME_NOW'"},
+  "ZipSize":{"iv":"'$7'"}
+}' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build/?publish=true' > squidex-output.json
 
 BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
-
 echo "BUILD_ID: $BUILD_ID"
 Response="$(cat squidex-output.json)"
 echo "Response: $Response"
+
+if [ $BUILD_ID == "null" ]; then
+        echo "Build_ID error. Curl without zipSize"
+        curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
+        "name":{"iv":"'$2'"},
+        "version":{"iv":"'$3'"},
+        "zip":{"iv":"'$4'"},
+        "buildDate":{"iv":"'$TIME_NOW'"}
+        }' 'https://cloud.squidex.io/api/content/skazbuka/web-bundle-build/?publish=true' > squidex-output.json 
+        BUILD_ID="$(cat squidex-output.json | jq --raw-output '.id')"
+        echo "BUILD_ID: $BUILD_ID"
+        Response="$(cat squidex-output.json)"
+        echo "Response: $Response"               
+fi
+
 
 if [ -z "$5" ]; then
         echo "client-version id not provided, exiting"

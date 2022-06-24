@@ -4,6 +4,7 @@
         "u3g3-mosaic",
         "mosaic",
         "u3g6-dots",
+        "dots",
         "u3g8-blocks",
         "blocks",
         "maze",
@@ -35,6 +36,7 @@
     ],
     "u3g8-blocks": [
         "u3g6-dots",
+        "dots",
         "u3g2-magicpaint",
         "maze",
         "cs:AnimalPuzzle",
@@ -44,6 +46,7 @@
     ],
     "blocks": [
         "u3g6-dots",
+        "dots",
         "u3g2-magicpaint",
         "maze",
         "cs:AnimalPuzzle",
@@ -134,6 +137,16 @@
         "maze",
         "u2g10-mirror"
     ],
+    "dots": [
+        "u3g8-blocks",
+        "blocks",
+        "u3g2-magicpaint",
+        "u3g3-mosaic",
+        "mosaic",
+        "cs:AnimalPuzzle",
+        "maze",
+        "u2g10-mirror"
+    ],
     "cs:Fishes": [
         "u3g4-snowboard",
         "lg-match-one",
@@ -171,6 +184,7 @@
         "u3g3-mosaic",
         "mosaic",
         "u3g6-dots",
+        "dots",
         "u3g8-blocks",
         "blocks",
         "maze",
@@ -181,6 +195,7 @@
         "u3g3-mosaic",
         "mosaic",
         "u3g6-dots",
+        "dots",
         "u3g8-blocks",
         "blocks",
         "maze",
@@ -224,6 +239,7 @@
         "u3g2-magicpaint",
         "magicPaint",
         "u3g6-dots",
+        "dots",
         "u3g8-blocks",
         "blocks",
         "maze",
@@ -234,6 +250,7 @@
         "u3g2-magicpaint",
         "magicPaint",
         "u3g6-dots",
+        "dots",
         "u3g8-blocks",
         "blocks",
         "maze",
@@ -245,6 +262,7 @@
         "u3g8-blocks",
         "blocks",
         "u3g6-dots",
+        "dots",
         "u0g2-zebra-space",
         "u3g2-magicpaint",
         "magicPaint"
@@ -256,6 +274,7 @@
         "u3g8-blocks",
         "blocks",
         "u3g6-dots",
+        "dots",
         "u3g2-magicpaint",
         "magicPaint"
     ],
@@ -273,6 +292,7 @@
         "u0g2-zebra-space",
         "maze",
         "u3g6-dots",
+        "dots",
         "u3g8-blocks",
         "blocks"
     ],
@@ -294,6 +314,7 @@
     ],
     "u1g8-reading-3": [
         "u3g6-dots",
+        "dots",
         "maze",
         "u3g2-magicpaint",
         "magicPaint",
@@ -305,6 +326,7 @@
     ],
     "reading": [
         "u3g6-dots",
+        "dots",
         "maze",
         "u3g2-magicpaint",
         "magicPaint",
@@ -345,6 +367,7 @@
         "u3g8-blocks",
         "blocks",
         "u3g6-dots",
+        "dots",
         "u3g2-magicpaint",
         "magicPaint"
     ],
@@ -396,6 +419,7 @@
         "u3g7-apples",
         "u3g1-ninja",
         "u3g6-dots",
+        "dots",
         "u1g6-catcode-2",
         "u2g11-puzzleroom"
     ],
@@ -407,7 +431,8 @@
         "u3g8-blocks",
         "blocks",
         "u2g10-mirror",
-        "u3g6-dots"
+        "u3g6-dots",
+        "dots"
     ],
     "Maths": [
         "u1g6-catcode-2",
@@ -426,6 +451,7 @@
         "u3g8-blocks",
         "blocks",
         "u3g6-dots",
+        "dots",
         "u3g2-magicpaint",
         "magicPaint"
     ]

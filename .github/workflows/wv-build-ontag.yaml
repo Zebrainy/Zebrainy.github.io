@@ -53,11 +53,17 @@ jobs:
       - if: ${{ env.VERSION == '' }}
         name: check version existence
         run: echo "version is not exists" && exit 1
+      
+      # Clean version is version without letters
+      - name: Clear version tag
+        run: |
+          clean_version=$(echo ${{ env.VERSION }} | rev | cut -d "-" -f 1 | rev | sed 's/^v-\?//g')
+          echo VERSION_CLEAN=$clean_version >> $GITHUB_ENV
 
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -84,7 +90,7 @@ jobs:
         run: curl https://zebrainy.github.io/scripts/manifest.js > manifest.js
 
       - name: Generate manifest
-        run: node manifest dist ${{ inputs.bundle_name }} ${{ env.VERSION }}
+        run: node manifest dist ${{ inputs.bundle_name }} ${{ env.VERSION_CLEAN }}
 
       - name: Archive
         run: |
@@ -95,6 +101,8 @@ jobs:
       - name: Prepare S3 upload
         run: |
           mkdir s3
+          zipSize=$(stat --printf="%s" dist/dist.zip)
+          echo "ZIPSIZE=$zipSize" >> $GITHUB_ENV
           mv dist/dist.zip s3/${{ env.VERSION }}.zip
           mv dist s3/${{ env.VERSION }}
 
@@ -119,21 +127,17 @@ jobs:
           curl https://zebrainy.github.io/scripts/squidex_web_bundle_build.sh > squidex.sh
           chmod +x ./squidex.sh
           SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
-          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.bundle_name }}" "${{ env.VERSION }}" "${{ env.BUNDLE_BUILD_URL }}" "${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}" "${{ inputs.squidex_bundle_name }}" 
+          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.bundle_name }}" "${{ env.VERSION_CLEAN }}" "${{ env.BUNDLE_BUILD_URL }}" "${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}" "${{ inputs.squidex_bundle_name }}" "${{ env.ZIPSIZE }}"
         env:
           BUNDLE_BUILD_URL: https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip
-          
-      - name: Clear version tag
-        continue-on-error: true
+
+      - name: GITHUB_HEAD_REF
         run: |
-          clean_version=$(echo ${{ env.VERSION }} | rev | cut -d "-" -f 1 | rev)
-          echo VERSION_CLEAN=$clean_version >> $GITHUB_ENV
-
-      - name: Set branch name 
-        run: | 
           echo ${{ github.event.base_ref }} > ref.txt
-          echo GIT_BRANCH_NAME=$(sed -E 's/refs\/heads\///' ref.txt) >> $GITHUB_ENV
-
+          GIT_BRANCH_NAME=$(sed -E 's/refs\/heads\///' ref.txt)
+          echo GIT_BRANCH_NAME=${GIT_BRANCH_NAME} >> $GITHUB_ENV
+          echo GITHUB_BRANCH_URL=https://github.com/${{github.repository}}/tree/${GIT_BRANCH_NAME} >> $GITHUB_ENV
+          
       - name: Send URLs to slack
         uses: archive/github-actions-slack@v2.4.0
         with:
@@ -143,6 +147,7 @@ jobs:
           slack-text: |
             :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION_CLEAN }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
             <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса>
+            *Ветка:* <${{ env.GITHUB_BRANCH_URL }}|${{ env.GIT_BRANCH_NAME }}>
 
       - name: upload bundle
         uses: actions/upload-artifact@v2.2.0
