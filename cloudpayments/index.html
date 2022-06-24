@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #container {
+                z-index: 9998;
+                position: absolute;
+                color: white;
+            }
+        </style>
+    </head>
+    <script src="https://widget.cloudpayments.ru/bundles/cloudpayments.js"></script>
+    <body>
+        <div id="container">
+            <div>card: <input value="4242 4242 4242 4242" type="text" /></div>
+        </div>
+        <script>
+            var widget = new cp.CloudPayments()
+            widget.pay(
+                'charge', // или 'charge'
+                {
+                    //options
+                    publicId: 'pk_1afcde5122a41d7072fa88e4e1f92', //id из личного кабинета
+                    description: 'Оплата товаров в example.com', //назначение
+                    amount: 100, //сумма
+                    currency: 'RUB', //валюта
+                    accountId: 'user@example.com', //идентификатор плательщика (необязательно)
+                    invoiceId: '1234567', //номер заказа  (необязательно)
+                    email: 'deniska@rediska.ru', //email плательщика (необязательно)
+                    skin: 'modern', //дизайн виджета (необязательно)
+                },
+                {
+                    onSuccess: function (options) {
+                        // success
+                        //действие при успешной оплате
+                    },
+                    onFail: function (reason, options) {
+                        // fail
+                        //действие при неуспешной оплате
+                    },
+                    onComplete: function (paymentResult, options) {
+                        console.log('complete: ', paymentResult, options)
+                        //Вызывается как только виджет получает от api.cloudpayments ответ с результатом транзакции.
+                        //например вызов вашей аналитики Facebook Pixel
+                    },
+                }
+            )
+        </script>
+    </body>
+</html>
