@@ -129,6 +129,11 @@ jobs:
           clean_version=$(echo ${{ env.VERSION }} | rev | cut -d "-" -f 1 | rev)
           echo VERSION_CLEAN=$clean_version >> $GITHUB_ENV
 
+      - name: Set branch name 
+        run: | 
+          echo ${{ github.event.base_ref }} > ref.txt
+          echo GIT_BRANCH_NAME=$(sed -E 's/refs\/heads\///' ref.txt) >> $GITHUB_ENV
+
       - name: Send URLs to slack
         uses: archive/github-actions-slack@v2.4.0
         with:
