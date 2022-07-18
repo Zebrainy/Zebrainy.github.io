@@ -91,6 +91,6 @@ jobs:
                   slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
                   slack-channel: ${{ inputs.SLACK_CHANNEL }}
                   slack-text: |
-                      ${{ inputs.slack_icon }} *${{ env.slack_name }} ${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
+                      :${{ inputs.slack_icon }}: *${{ env.slack_name }} ${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
                       Изменения:
                       ${{ env.LOGS }}
