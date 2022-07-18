@@ -2,10 +2,6 @@ name: Reusable workflow - Build npm module
 
 on:
     workflow_call:
-        inputs:
-            SLACK_CHANNEL:
-                required: true
-                type: string
         secrets:
             ORG_PERSONAL_ACCESS_TOKEN:
                 required: true
