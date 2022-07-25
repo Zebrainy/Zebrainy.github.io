@@ -1,1 +1,453 @@
-[{"index":"0","key":"brazil","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/brazil1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/brazil.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/brazil.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/brazil_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_brazil_en.mp3"},{"index":"1","key":"canada","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/canada1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/canada.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/canada.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/canada_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_canada_en.mp3","undefined":"Для проверки конфига вне платформы, нужно во всех урлах заменить /cache/google-storage на https://storage.googleapis.com/zebrainy-games"},{"index":"2","key":"egypt","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/egypt1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/egypt.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/egypt.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/egypt_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_egypt_en.mp3"},{"index":"3","key":"england","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/england1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/england.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/england.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/england_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_england_en.mp3"},{"index":"4","key":"greece","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/greece1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/greece.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/greece.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/greece_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_greece_en.mp3"},{"index":"5","key":"india","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/india1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/india.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/india.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/india_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_india_en.mp3"},{"index":"6","key":"japan","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/japan1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/japan.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/japan.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/japan_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_japan_en.mp3"},{"index":"7","key":"norway","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/norway1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/norway.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/norway.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/norway_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_norway_en.mp3"},{"index":"8","key":"russia","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/russia1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/russia.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/russia.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/russia_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_russia_en.mp3"},{"index":"9","key":"usa","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/usa1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/usa.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/usa.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/usa_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_usa_en.mp3"},{"index":"10","key":"france","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/france1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/france.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/france.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/france_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_france_en.mp3"},{"index":"11","key":"malaysia","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/malaysia1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/malaysia.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/malaysia.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/malaysia_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_malaysia_en.mp3"},{"index":"12","key":"albania","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/albania1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/albania.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/albania.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/albania_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_albania_en.mp3"},{"index":"13","key":"spain","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/spain1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/spain.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/spain.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/spain_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_spain_en.mp3"},{"index":"14","key":"bulgaria","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/bulgaria1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/bulgaria.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/bulgaria.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/bulgaria_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_bulgaria_en.mp3"},{"index":"15","key":"korea","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/korea1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/korea.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/korea.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/korea_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_korea_en.mp3"},{"index":"16","key":"mexico","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/mexico1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/mexico.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/mexico.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mexico_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_mexico_en.mp3"},{"index":"17","key":"hungary","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/hungary1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/hungary.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/hungary.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/hungray_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_hungary_%C2%A0en.mp3"},{"index":"18","key":"ecuador","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/ecuador1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/ecuador.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/ecuador.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/ecuador_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_ecuador_en.mp3"},{"index":"19","key":"vietnam","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/vietnam1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/vietnam.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/vietnam.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/vietnam_4.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_vietnam_en.mp3"},{"index":"20","key":"belorus","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/belarus1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/belarus.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/belorus.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_belarus.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_belarus_en.mp3"},{"index":"21","key":"dania","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/denmark1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/denmark.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/dania.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_denmark.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_denmark_en.mp3"},{"index":"22","key":"german","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/germany1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/germany.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/german.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_germany.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_germany_en.mp3"},{"index":"23","key":"gruzia","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/georgia1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/georgia.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/gruzia.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_georgia.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_georgia_en.mp3"},{"index":"24","key":"iceland","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/iceland1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/iceland.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/iceland.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_iceland.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_iceland_en.mp3"},{"index":"25","key":"ireland","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/ireland1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/ireland.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/ireland.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_ireland.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_ireland_en.mp3"},{"index":"26","key":"italia","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/italy1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/italy.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/italia.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_italy.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_italy_en.mp3"},{"index":"27","key":"izrael","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/israel1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/israel.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/izrael.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_israel.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_israel_en.mp3"},{"index":"28","key":"kazakhstan","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/kazakstan1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/kazakstan.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/kazakhstan.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_kazakhstan.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_kazakhstan_en.mp3"},{"index":"29","key":"litva","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/lithuania1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/lithuania.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/litva.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_lithuania.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_lithuania_en.mp3"},{"index":"30","key":"peru","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/peru1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/peru.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/peru.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_peru.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_peru_en.mp3"},{"index":"31","key":"portugalia","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/portugal_madeira1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/portugal_madeira.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/portugalia.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_portugal.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_portugal_en.mp3"},{"index":"32","key":"tailand","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/thailand1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/thailand.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/tailand.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_tailand.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_thailand_en.mp3"},{"index":"33","key":"ukrain","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/ukraine1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/ukraine.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/ukrain.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_ukraine.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_ukraine_en.mp3"},{"index":"34","key":"uzbek","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/uzbekistan1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/uzbekistan.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/uzbek.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_uzbekistan.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_uzbekistan_en.mp3"},{"index":"35","key":"alaska","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Alaska1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Alaska.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/alyaska.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_alaska_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_alaska_en.mp3"},{"index":"36","key":"andes","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Andes1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Andes.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/andes.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_andes_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_andes_en.mp3"},{"index":"37","key":"antacartis","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Antacartis1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Antacartis.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/antarktida.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_antarctic_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_antarctic_en.mp3"},{"index":"38","key":"arctic","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Arctic1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Arctic.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/arktika.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_arctic_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_arctic_en.mp3"},{"index":"39","key":"belgique","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Belgique1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Belgique.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/belgia.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_belgium_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_belgium_en.mp3"},{"index":"40","key":"chili","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Chili1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Chili.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/chili.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_chilie_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_chilie_en.mp3"},{"index":"41","key":"praga","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Praga1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Praga.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/czech.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_czech_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_czech_en.mp3"},{"index":"42","key":"greenland","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Greenland1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Greenland.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/grenlandia.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_greenland_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_greenland_en.mp3"},{"index":"43","key":"liechtenstein","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Liechtenstein1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Liechtenstein.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/lihtenshtein.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_liechtenstein_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_liechtenstein_en.mp3"},{"index":"44","key":"philippines","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Philippines1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Philippines.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/phillipines.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_philippines_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_philippines_en.mp3"},{"index":"45","key":"sahara","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Sahara1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Sahara.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/sahara.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_sahara_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_sahara_en.mp3"},{"index":"46","key":"sweden","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Sweden1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Sweden.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/sweden.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_sweden_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_sweden_en.mp3"},{"index":"47","key":"tibet","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Tibet1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Tibet.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/tibet.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_tibet_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_tibet_en.mp3"},{"index":"48","key":"turkey","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Turkey1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Turkey.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/turkish.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_turkey_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_turkey_en.mp3"},{"index":"49","key":"wales","blurryphotourl":"/cache/google-storage/unit-team-tests/mirror-content/Wales1.png","photourl":"/cache/google-storage/unit-team-tests/mirror-content/Wales.png","capurl":"/cache/google-storage/unit-team-tests/mirror-content/Caps/wels.png","rusvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_wales_en.mp3","engvoiceurl":"/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_wales_en.mp3"}]
+[
+  {
+    "index": "0",
+    "key": "brazil",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/brazil1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/brazil.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/brazil.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/brazil_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_brazil_en.mp3"
+  },
+  {
+    "index": "1",
+    "key": "canada",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/canada1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/canada.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/canada.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/canada_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_canada_en.mp3",
+    "undefined": "Для проверки конфига вне платформы, нужно во всех урлах заменить /cache/google-storage на https://storage.googleapis.com/zebrainy-games"
+  },
+  {
+    "index": "2",
+    "key": "egypt",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/egypt1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/egypt.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/egypt.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/egypt_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_egypt_en.mp3"
+  },
+  {
+    "index": "3",
+    "key": "england",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/england1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/england.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/england.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/england_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_england_en.mp3"
+  },
+  {
+    "index": "4",
+    "key": "greece",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/greece1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/greece.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/greece.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/greece_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_greece_en.mp3"
+  },
+  {
+    "index": "5",
+    "key": "india",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/india1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/india.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/india.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/india_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_india_en.mp3"
+  },
+  {
+    "index": "6",
+    "key": "japan",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/japan1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/japan.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/japan.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/japan_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_japan_en.mp3"
+  },
+  {
+    "index": "7",
+    "key": "norway",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/norway1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/norway.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/norway.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/norway_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_norway_en.mp3"
+  },
+  {
+    "index": "8",
+    "key": "russia",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/russia1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/russia.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/russia.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/russia_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_russia_en.mp3"
+  },
+  {
+    "index": "9",
+    "key": "usa",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/usa1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/usa.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/usa.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/usa_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_usa_en.mp3"
+  },
+  {
+    "index": "10",
+    "key": "france",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/france1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/france.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/france.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/france_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_france_en.mp3"
+  },
+  {
+    "index": "11",
+    "key": "malaysia",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/malaysia1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/malaysia.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/malaysia.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/malaysia_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_malaysia_en.mp3"
+  },
+  {
+    "index": "12",
+    "key": "albania",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/albania1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/albania.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/albania.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/albania_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_albania_en.mp3"
+  },
+  {
+    "index": "13",
+    "key": "spain",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/spain1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/spain.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/spain.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/spain_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_spain_en.mp3"
+  },
+  {
+    "index": "14",
+    "key": "bulgaria",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/bulgaria1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/bulgaria.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/bulgaria.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/bulgaria_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_bulgaria_en.mp3"
+  },
+  {
+    "index": "15",
+    "key": "korea",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/korea1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/korea.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/korea.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/korea_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_korea_en.mp3"
+  },
+  {
+    "index": "16",
+    "key": "mexico",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/mexico1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/mexico.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/mexico.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mexico_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_mexico_en.mp3"
+  },
+  {
+    "index": "17",
+    "key": "hungary",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/hungary1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/hungary.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/hungary.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/hungray_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_hungary_%C2%A0en.mp3"
+  },
+  {
+    "index": "18",
+    "key": "ecuador",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/ecuador1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/ecuador.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/ecuador.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/ecuador_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_ecuador_en.mp3"
+  },
+  {
+    "index": "19",
+    "key": "vietnam",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/vietnam1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/vietnam.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/vietnam.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/vietnam_4.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_vietnam_en.mp3"
+  },
+  {
+    "index": "20",
+    "key": "belorus",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/belarus1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/belarus.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/belorus.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_belarus.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_belarus_en.mp3"
+  },
+  {
+    "index": "21",
+    "key": "dania",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/denmark1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/denmark.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/dania.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_denmark.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_denmark_en.mp3"
+  },
+  {
+    "index": "22",
+    "key": "german",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/germany1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/germany.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/german.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_germany.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_germany_en.mp3"
+  },
+  {
+    "index": "23",
+    "key": "gruzia",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/georgia1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/georgia.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/gruzia.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_georgia.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_georgia_en.mp3"
+  },
+  {
+    "index": "24",
+    "key": "iceland",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/iceland1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/iceland.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/iceland.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_iceland.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_iceland_en.mp3"
+  },
+  {
+    "index": "25",
+    "key": "ireland",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/ireland1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/ireland.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/ireland.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_ireland.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_ireland_en.mp3"
+  },
+  {
+    "index": "26",
+    "key": "italia",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/italy1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/italy.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/italia.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_italy.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_italy_en.mp3"
+  },
+  {
+    "index": "27",
+    "key": "izrael",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/israel1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/israel.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/izrael.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_israel.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_israel_en.mp3"
+  },
+  {
+    "index": "28",
+    "key": "kazakhstan",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/kazakstan1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/kazakstan.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/kazakhstan.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_kazakhstan.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_kazakhstan_en.mp3"
+  },
+  {
+    "index": "29",
+    "key": "litva",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/lithuania1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/lithuania.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/litva.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_lithuania.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_lithuania_en.mp3"
+  },
+  {
+    "index": "30",
+    "key": "peru",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/peru1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/peru.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/peru.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_peru.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_peru_en.mp3"
+  },
+  {
+    "index": "31",
+    "key": "portugalia",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/portugal_madeira1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/portugal_madeira.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/portugalia.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_portugal.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_portugal_en.mp3"
+  },
+  {
+    "index": "32",
+    "key": "tailand",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/thailand1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/thailand.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/tailand.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_tailand.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_thailand_en.mp3"
+  },
+  {
+    "index": "33",
+    "key": "ukrain",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/ukraine1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/ukraine.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/ukrain.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_ukraine.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_ukraine_en.mp3"
+  },
+  {
+    "index": "34",
+    "key": "uzbek",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/uzbekistan1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/uzbekistan.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/uzbek.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/RusVoice/mirror_item_uzbekistan.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_uzbekistan_en.mp3"
+  },
+  {
+    "index": "35",
+    "key": "alaska",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Alaska1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Alaska.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/alyaska.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_alaska_en.mp3"
+  },
+  {
+    "index": "36",
+    "key": "andes",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Andes1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Andes.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/andes.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_andes_en.mp3"
+  },
+  {
+    "index": "37",
+    "key": "antacartis",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Antacartis1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Antacartis.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/antarktida.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_antarctic_en.mp3"
+  },
+  {
+    "index": "38",
+    "key": "arctic",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Arctic1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Arctic.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/arktika.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_arctic_en.mp3"
+  },
+  {
+    "index": "39",
+    "key": "belgique",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Belgique1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Belgique.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/belgia.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_belgium_en.mp3"
+  },
+  {
+    "index": "40",
+    "key": "chili",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Chili1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Chili.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/chili.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_chilie_en.mp3"
+  },
+  {
+    "index": "41",
+    "key": "praga",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Praga1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Praga.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/czech.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_czech_en.mp3"
+  },
+  {
+    "index": "42",
+    "key": "greenland",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Greenland1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Greenland.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/grenlandia.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_greenland_en.mp3"
+  },
+  {
+    "index": "43",
+    "key": "liechtenstein",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Liechtenstein1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Liechtenstein.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/lihtenshtein.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_liechtenstein_en.mp3"
+  },
+  {
+    "index": "44",
+    "key": "philippines",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Philippines1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Philippines.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/phillipines.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_philippines_en.mp3"
+  },
+  {
+    "index": "45",
+    "key": "sahara",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Sahara1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Sahara.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/sahara.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_sahara_en.mp3"
+  },
+  {
+    "index": "46",
+    "key": "sweden",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Sweden1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Sweden.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/sweden.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_sweden_en.mp3"
+  },
+  {
+    "index": "47",
+    "key": "tibet",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Tibet1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Tibet.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/tibet.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_tibet_en.mp3"
+  },
+  {
+    "index": "48",
+    "key": "turkey",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Turkey1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Turkey.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/turkish.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_turkey_en.mp3"
+  },
+  {
+    "index": "49",
+    "key": "wales",
+    "blurryphotourl": "/cache/google-storage/unit-team-tests/mirror-content/Wales1.png",
+    "photourl": "/cache/google-storage/unit-team-tests/mirror-content/Wales.png",
+    "capurl": "/cache/google-storage/unit-team-tests/mirror-content/Caps/wels.png",
+    "rusvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EmptyClip.mp3",
+    "engvoiceurl": "/cache/google-storage/unit-team-tests/mirror-content/EngVoice/mirror_item_wales_en.mp3"
+  }
+]
