@@ -72,6 +72,7 @@
         "u1g5-kitties"
     ],
     "u1g1-zebra-chef": [
+        "zebrachef",
         "u3g3-mosaic",
         "u2g10-mirror",
         "u1g5-kitties"
@@ -260,5 +261,14 @@
         "reading",
         "cs:AnimalPuzzle",
         "u0g5-zebra-home"
+    ],
+    "zebrachef": [
+        "lg-puzzleshapes",
+        "puzzleshapes",
+        "u3g7-apples",
+        "u3g1-ninja",
+        "mg:Smiles",
+        "u1g5-kitties",
+        "u1g5-diner"
     ]
 }
