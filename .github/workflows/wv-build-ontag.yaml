@@ -116,11 +116,24 @@ jobs:
           AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+      - name: Upload to S3 SELECTEL
+        uses: Zebrainy/s3-sync-action@s1
+        continue-on-error: true
+        with:
+          dirname: s3
+          s3dirname: web-bundles/bundles/${{ inputs.bundle_name }}
+          bucketname: web-bundles
+          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_SELECTEL }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_SELECTEL }}      
+
       - name: Print URLs
         run: |
           echo AWS:
           echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html"
           echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip"
+          echo Selectel:
+          echo "https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ env.bundle_name }}/${{ env.VERSION }}/index.html"
+          echo "https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ env.bundle_name }}/${{ env.VERSION }}.zip"
       
       - name: Create build metadata in Squidex
         run: |
@@ -146,7 +159,8 @@ jobs:
           # slack-optional-icon_emoji: ":${{ inputs.slack_icon }}:"
           slack-text: |
             :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION_CLEAN }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
-            <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса>
+            <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса (amazon)>
+            <https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса (selectel)>
             *Ветка:* <${{ env.GITHUB_BRANCH_URL }}|${{ env.GIT_BRANCH_NAME }}>
 
       - name: upload bundle
