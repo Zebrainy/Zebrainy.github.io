@@ -123,6 +123,17 @@ jobs:
           bucketname: web-bundles
           AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_SELECTEL }}
           AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_SELECTEL }}      
+      
+      - name: Upload to S3 AWS
+        uses: Zebrainy/s3-sync-action@v2
+        continue-on-error: true
+        with:
+          dirname: s3
+          s3dirname: web-games/bundles/${{ inputs.game_name }}
+          bucketname: web-bundles
+          REGION: us-east-2
+          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Create build metadata in Squidex
         run: |
@@ -140,4 +151,5 @@ jobs:
           slack-channel: ${{inputs.SLACK_CHANNEL}}
           slack-text: |
             :jigsaw: *${{ inputs.game_name }}* *${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.GAME_NAME_RU }}>) ${{ env.DEBUG_INFO }}
-            :paperclip: <https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
+            AWS: <https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
+            Selectel: <https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
