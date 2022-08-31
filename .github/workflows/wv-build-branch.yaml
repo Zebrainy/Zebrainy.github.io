@@ -54,18 +54,29 @@ jobs:
           mv dist/dist.zip s3/${BRANCH_NAME}/latest.zip
           mv dist s3/${BRANCH_NAME}/latest
 
-      - name: Upload to S3 AWS
-        uses: Zebrainy/s3-sync-action@v2
+      # - name: Upload to S3 AWS
+      #   uses: Zebrainy/s3-sync-action@v2
+      #   with:
+      #     dirname: s3
+      #     s3dirname: web-bundles/bundles/${{ inputs.bundle_name }}/branches
+      #     bucketname: web-bundles
+      #     REGION: us-east-2
+      #     AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Upload to S3 SELECTEL
+        uses: Zebrainy/s3-sync-action@s1
         with:
           dirname: s3
           s3dirname: web-bundles/bundles/${{ inputs.bundle_name }}/branches
           bucketname: web-bundles
-          REGION: us-east-2
-          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_SELECTEL }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_SELECTEL }} 
 
       - name: Print URLs
         run: |
-          echo AWS:
-          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest/index.html"
-          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest.zip"
+          echo Selectel:
+          # echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest/index.html"
+          # echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest.zip"
+          echo "https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest/index.html"
+          echo "https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest.zip
