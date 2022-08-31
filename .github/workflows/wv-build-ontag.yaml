@@ -117,9 +117,9 @@ jobs:
 
       - name: Print URLs
         run: |
-          # echo AWS:
-          # echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html"
-          # echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip"
+          echo AWS:
+          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html"
+          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip"
           echo Selectel:
           echo "https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ env.bundle_name }}/${{ env.VERSION }}/index.html"
           echo "https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ env.bundle_name }}/${{ env.VERSION }}.zip"
@@ -148,7 +148,8 @@ jobs:
           # slack-optional-icon_emoji: ":${{ inputs.slack_icon }}:"
           slack-text: |
             :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION_CLEAN }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
-            <https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса>
+            <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса (amazon)>
+            <https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса (selectel)>
             *Ветка:* <${{ env.GITHUB_BRANCH_URL }}|${{ env.GIT_BRANCH_NAME }}>
 
       - name: upload bundle
