@@ -80,8 +80,8 @@ jobs:
           echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/latest/index.html"
           echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/latest.zip"
           echo Selectel:
-          echo "https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ env.bundle_name }}/latest/index.html"
-          echo "https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-bundles/bundles/${{ env.bundle_name }}/latest.zip"
+          echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ env.bundle_name }}/latest/index.html"
+          echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ env.bundle_name }}/latest.zip"
           
       - name: Tag new version (v1)
         uses: pkgdeps/action-package-version-to-git-tag@v1.5.0
