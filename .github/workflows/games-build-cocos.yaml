@@ -162,7 +162,7 @@ jobs:
           SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
           ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}" "${{ env.ZIPSIZE }}"
         env:
-          WEBGAME_BUILD_URL: https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
+          WEBGAME_BUILD_URL: https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
       
       - name: Add debug label
         if: github.event.inputs.debug == 'true'
@@ -176,4 +176,4 @@ jobs:
           slack-text: |
             :jigsaw: *${{ inputs.game_name }}* *${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.GAME_NAME_RU }}>) ${{ env.DEBUG_INFO }}
             AWS: <https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
-            Selectel: <https://6a39d29f-7919-4a2c-b54e-f8066f9effbb.selcdn.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
+            Selectel: <https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
