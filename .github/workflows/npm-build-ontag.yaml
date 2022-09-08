@@ -23,7 +23,7 @@ on:
                 required: true
             CI_CD_SLACK_TOKEN:
                 required: true
-            NPM_TOKEN:
+            ZEBRAINY_NPM_TOKEN:
                 required: true
 
 jobs:
@@ -71,7 +71,7 @@ jobs:
             - name: NPM Publish
               uses: JS-DevTools/npm-publish@v1
               with:
-                  token: ${{ secrets.NPM_TOKEN }}
+                  token: ${{ secrets.ZEBRAINY_NPM_TOKEN }}
                   access: public
 
             - name: Send msg to slack
