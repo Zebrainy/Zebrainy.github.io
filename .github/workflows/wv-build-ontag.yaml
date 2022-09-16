@@ -130,7 +130,7 @@ jobs:
           SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
           ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.bundle_name }}" "${{ env.VERSION_CLEAN }}" "${{ env.BUNDLE_BUILD_URL }}" "${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}" "${{ inputs.squidex_bundle_name }}" "${{ env.ZIPSIZE }}"
         env:
-          BUNDLE_BUILD_URL: https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip
+          BUNDLE_BUILD_URL: web-bundles://${{ inputs.bundle_name }}/${{ env.VERSION }}.zip
 
       - name: GITHUB_HEAD_REF
         run: |
