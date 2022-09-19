@@ -82,5 +82,4 @@ jobs:
                   slack-text: |
                       :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
                       Изменения:
-                      ${{ secrets.CI_CD_SLACK_TOKEN }}
                       ${{ env.LOGS }}
