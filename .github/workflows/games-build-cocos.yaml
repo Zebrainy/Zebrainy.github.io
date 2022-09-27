@@ -160,10 +160,11 @@ jobs:
           curl https://zebrainy.github.io/scripts/squidex_create_build.sh > squidex.sh
           chmod +x ./squidex.sh
           SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
-          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}" "${{ env.ZIPSIZE }}"
+          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}" "${{ env.ZIPSIZE }}" "${{ env.PROTOCOL_URL }}"
         env:
-          WEBGAME_BUILD_URL: web-games://${{ inputs.game_name }}/${{ env.VERSION }}.zip
-      
+          WEBGAME_BUILD_URL: https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
+          PROTOCOL_URL: web-games://${{ inputs.game_name }}/${{ env.VERSION }}.zip
+
       - name: Add debug label
         if: github.event.inputs.debug == 'true'
         run: echo "DEBUG_INFO=🧪[Debug Build]" >> $GITHUB_ENV
