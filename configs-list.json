@@ -1,0 +1,24 @@
+{
+    "configs":
+    [
+        "u1g7-reading",
+        "u2g1-immunity",
+        "u2g10-en-mirror",
+        "u2g10-mirror",
+        "u2g2-bee",
+        "u2g3-maze",
+        "u2g5-dig",
+        "u2g6-bubble",
+        "u2g7-zebra-sleep",
+        "u2g8-mirror",
+        "u2g9-maze",
+        "u3g10-puzzleroom",
+        "u3g2-magicpaint",
+        "u3g4-snowboard",
+        "u3g5-shadows",
+        "u3g7-apples",
+        "u3g8-blocks",
+        "u3g9-zebravision",
+        "Recommendations"
+    ]
+}

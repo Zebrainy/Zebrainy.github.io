@@ -1,0 +1,49 @@
+name: Upload to Selectel
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Some magic (prepare to upload)
+        run: |
+          mkdir configs-to-upload | echo 'exists'
+          for fn in `jq -r '.configs[]' ./configs-list.json`; do cp -r "./$fn" ./configs-to-upload/; done
+
+      - name: Upload to S3 SELECTEL
+        uses: Zebrainy/s3-sync-action@s1
+        with:
+          dirname: configs-to-upload
+          s3dirname: configs
+          bucketname: web-bundles
+          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_SELECTEL }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_SELECTEL }}
+            
+      - name: Upload to S3 AWS
+        uses: Zebrainy/s3-sync-action@v2
+        with:
+          dirname: configs-to-upload
+          s3dirname: configs
+          bucketname: web-bundles
+          REGION: us-east-2
+          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Print URLs
+        run: |
+          pushd ./configs-to-upload/;
+          array=$(find * -mindepth 1);
+          echo "SELECTEL:";
+          for i in $array; do echo "https://471631.selcdn.ru/web-bundles/configs/$i"; done
+          echo "AWS:";
+          for i in $array; do echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/configs/$i"; done
+          popd
