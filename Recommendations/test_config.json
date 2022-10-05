@@ -20,6 +20,7 @@
         "u2g10-mirror",
         "puzzleshapes",
         "u1g1-zebra-chef",
+        "zebrachef",
         "u0g2-zebra-space",
         "blocks"
     ],
@@ -51,6 +52,7 @@
         "u0g2-zebra-space",
         "u1g5-diner",
         "u1g1-zebra-chef",
+        "zebrachef",
         "u3g4-snowboard",
         "u2g7-zebra-sleep",
         "mg:Read"
@@ -67,7 +69,7 @@
         "u1g3-ghosts",
         "cs:AnimalPuzzle",
         "dots",
-		"reading",
+        "reading",
         "zebranotes-game",
         "u2g10-mirror"
     ],
@@ -89,6 +91,7 @@
     ],
     "u1g5-diner": [
         "u1g1-zebra-chef",
+        "zebrachef",
         "dig",
         "mosaic",
         "u1g4-bar",
@@ -125,6 +128,7 @@
         "lg-constructor-cocos",
         "u2g7-zebra-sleep",
         "u1g1-zebra-chef",
+        "zebrachef",
         "u3g5-shadows"
     ],
     "u1g5-kitties": [
@@ -164,6 +168,7 @@
         "u2g11-puzzleroom",
         "blocks",
         "u1g1-zebra-chef",
+        "zebrachef",
         "u0g5-zebra-home",
         "u3g4-snowboard"
     ],
@@ -193,6 +198,7 @@
     ],
     "u3g1-ninja": [
         "u1g1-zebra-chef",
+        "zebrachef",
         "dig",
         "Maths",
         "u1g4-bar",
@@ -204,12 +210,14 @@
         "lg-constructor-cocos",
         "u0g2-zebra-space",
         "u1g1-zebra-chef",
+        "zebrachef",
         "u1g3-ghosts",
         "u3g4-snowboard"
     ],
     "lg-puzzleshapes": [
         "maze",
         "u1g1-zebra-chef",
+        "zebrachef",
         "u1g5-diner",
         "blocks",
         "zebranotes-game",
@@ -218,6 +226,7 @@
     "puzzleshapes": [
         "maze",
         "u1g1-zebra-chef",
+        "zebrachef",
         "u1g5-diner",
         "blocks",
         "zebranotes-game",
@@ -337,6 +346,7 @@
     ],
     "u0g5-zebra-home": [
         "u1g1-zebra-chef",
+        "zebrachef",
         "magicPaint",
         "blocks",
         "u2g11-puzzleroom",
@@ -349,6 +359,7 @@
         "u1g6-catcode-2",
         "u0g5-zebra-home",
         "u1g1-zebra-chef",
+        "zebrachef",
         "u3g7-apples"
     ],
     "island-unity-game": [
