@@ -352,19 +352,19 @@
         "u3g7-apples"
     ],
     "island-unity-game": [
-        "reading",
-        "maze",
-        "u1g6-catcode-2",
-        "blocks",
-        "u2g10-mirror",
-        "dots"
+        "puzzleshapes",
+        "u0g5-zebra-home",
+        "Maths",
+        "zebranotes-game",
+        "mosaic",
+        "blocks"
     ],
     "sandbox1": [
-        "dig",
+        "u0g5-zebra-home",
         "zebrachef",
         "maze",
-        "Maths",
-        "puzzleshapes",
-        "magicPaint"
+        "u1g5-kitties",
+        "u2g11-puzzleroom",
+        "zebrachef"
     ]
 }
