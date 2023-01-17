@@ -155,6 +155,14 @@
         "magicPaint",
         "u3g9-zebravision"
     ],
+    "matchone-cocos": [
+        "lg-constructor-cocos",
+        "cs:AnimalPuzzle",
+        "puzzleshapes",
+        "cats-cocos",
+        "magicPaint",
+        "u3g9-zebravision"
+    ],
     "cs:Memory": [
         "cs:AnimalPuzzle",
         "u1g6-catcode-2",
