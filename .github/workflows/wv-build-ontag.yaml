@@ -31,10 +31,6 @@ on:
     secrets:
       ORG_PERSONAL_ACCESS_TOKEN:
         required: true
-      AWS_ACCESS_KEY_ID:
-        required: true
-      AWS_SECRET_ACCESS_KEY:
-        required: true
       squidex_client_secret:
         required: true
       CI_CD_SLACK_TOKEN:
@@ -92,15 +88,6 @@ jobs:
           echo "ZIPSIZE=$zipSize" >> $GITHUB_ENV
           mv dist/dist.zip s3/${{ env.VERSION }}.zip
           mv dist s3/${{ env.VERSION }}
-      - name: Upload to S3 AWS
-        uses: Zebrainy/s3-sync-action@v2
-        with:
-          dirname: s3
-          s3dirname: web-bundles/bundles/${{ inputs.bundle_name }}
-          bucketname: web-bundles
-          REGION: us-east-2
-          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Upload to S3 SELECTEL
         uses: Zebrainy/s3-sync-action@s1
@@ -113,9 +100,6 @@ jobs:
 
       - name: Print URLs
         run: |
-          echo AWS:
-          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html"
-          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip"
           echo Selectel:
           echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ env.bundle_name }}/${{ env.VERSION }}/index.html"
           echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ env.bundle_name }}/${{ env.VERSION }}.zip"
@@ -144,7 +128,6 @@ jobs:
           # slack-optional-icon_emoji: ":${{ inputs.slack_icon }}:"
           slack-text: |
             :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION_CLEAN }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
-            <https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса (amazon)>
             <https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса (selectel)>
             *Ветка:* <${{ env.GITHUB_BRANCH_URL }}|${{ env.GIT_BRANCH_NAME }}>
       - name: upload bundle
