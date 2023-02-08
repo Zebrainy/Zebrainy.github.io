@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Download single file from AWS
+      - name: Download COCOS from Selectel 
         uses: Zebrainy/s3-sync-action@s1
         with:
           dirname: download
