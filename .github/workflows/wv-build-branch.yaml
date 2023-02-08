@@ -10,11 +10,6 @@ on:
         required: false
         type: string
         default: ci:build
-    secrets:
-      AWS_ACCESS_KEY_ID:
-        required: true
-      AWS_SECRET_ACCESS_KEY:
-        required: true
 
 jobs:
   build:
@@ -54,16 +49,6 @@ jobs:
           mv dist/dist.zip s3/${BRANCH_NAME}/latest.zip
           mv dist s3/${BRANCH_NAME}/latest
 
-      - name: Upload to S3 AWS
-        uses: Zebrainy/s3-sync-action@v2
-        with:
-          dirname: s3
-          s3dirname: web-bundles/bundles/${{ inputs.bundle_name }}/branches
-          bucketname: web-bundles
-          REGION: us-east-2
-          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
       - name: Upload to S3 SELECTEL
         uses: Zebrainy/s3-sync-action@s1
         with:
@@ -75,9 +60,6 @@ jobs:
 
       - name: Print URLs
         run: |
-          echo AWS:
-          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest/index.html"
-          echo "https://d32vx8mc5b2105.cloudfront.net/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest.zip"
           echo Selectel:
           echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest/index.html"
           echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/branches/${BRANCH_NAME}/latest.zip
