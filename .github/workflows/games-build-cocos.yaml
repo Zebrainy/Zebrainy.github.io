@@ -26,10 +26,6 @@ on:
     secrets:
       CI_CD_SLACK_TOKEN:
         required: true
-      AWS_ACCESS_KEY_ID:
-        required: true
-      AWS_SECRET_ACCESS_KEY:
-        required: true
       squidex_client_secret:
         required: true
 
@@ -41,16 +37,15 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Download single file from AWS
-        uses: Zebrainy/s3-sync-action@v2
+        uses: Zebrainy/s3-sync-action@s1
         with:
           dirname: download
           bucketname: web-bundles
           s3dirname: programs/cocos-creator
           FILENAME: cocos-v${{ inputs.COCOS_VERSION }}.zip
           DOWNLOAD: true
-          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          REGION: us-east-2
+          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_SELECTEL }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_SELECTEL }}
 
       - name: Unzip cocos
         run: unzip ./download/*.zip -d cocos
@@ -134,17 +129,6 @@ jobs:
           mv build/build.zip s3/${{ env.VERSION }}.zip
           mv build s3/${{ env.VERSION }}
         
-      - name: Upload to S3 AWS
-        uses: Zebrainy/s3-sync-action@v2
-        continue-on-error: true
-        with:
-          dirname: s3
-          s3dirname: web-games/bundles/${{ inputs.game_name }}
-          bucketname: web-bundles
-          REGION: us-east-2
-          AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
       - name: Upload archive to S3 SELECTEL
         uses: Zebrainy/s3-sync-action@s1
         continue-on-error: true
@@ -176,5 +160,4 @@ jobs:
           slack-channel: ${{inputs.SLACK_CHANNEL}}
           slack-text: |
             :jigsaw: *${{ inputs.game_name }}* *${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.GAME_NAME_RU }}>) ${{ env.DEBUG_INFO }}
-            AWS: <https://d32vx8mc5b2105.cloudfront.net/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
             Selectel: <https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
