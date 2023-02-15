@@ -352,6 +352,14 @@
         "mosaic",
         "u0g2-zebra-space"
     ],
+    "math-unity": [
+        "blocks",
+        "u1g6-catcode-2",
+        "u1g5-diner",
+        "u3g7-apples",
+        "mosaic",
+        "u0g2-zebra-space"
+    ],
     "u0g5-zebra-home": [
         "u1g1-zebra-chef",
         "zebrachef",
