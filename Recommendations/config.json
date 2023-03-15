@@ -385,5 +385,31 @@
         "zebranotes-game",
         "mosaic",
         "blocks"
+    ],
+    "diner": [
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "dig",
+        "mosaic",
+        "u1g4-bar",
+        "u1g3-ghosts",
+        "u2g10-mirror"
+    ],
+    "cats_3": [
+        "u1g3-ghosts",
+        "cs:AnimalPuzzle",
+        "dots",
+        "reading",
+        "zebranotes-game",
+        "u2g10-mirror"
+    ],
+    "sandbox1": [
+        "u0g5-zebra-home",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "maze",
+        "u1g5-kitties",
+        "u2g11-puzzleroom",
+        "blocks"
     ]
 }
