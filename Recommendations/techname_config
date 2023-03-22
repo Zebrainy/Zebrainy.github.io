@@ -1,0 +1,415 @@
+{
+    "cs:AnimalPuzzle": [
+        "zebranotes-game",
+        "mosaic",
+        "magicPaint",
+        "dots",
+        "lg-constructor-cocos",
+        "mg:Read"
+    ],
+    "u3g7-apples": [
+        "u1g3-ghosts",
+        "u1g5-kitties",
+        "zebranotes-game",
+        "Maths",
+        "u1g6-catcode-2",
+        "u2g2-bee"
+    ],
+    "u1g4-bar": [
+        "u1g5-diner",
+        "u2g10-mirror",
+        "puzzleshapes",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "u0g2-zebra-space",
+        "blocks"
+    ],
+    "u2g2-bee": [
+        "dig",
+        "u1g4-bar",
+        "u2g11-puzzleroom",
+        "maze",
+        "u3g4-snowboard",
+        "zebranotes-game"
+    ],
+    "blocks": [
+        "mosaic",
+        "u3g7-apples",
+        "u0g5-zebra-home",
+        "puzzleshapes",
+        "Maths",
+        "u1g3-ghosts"  
+    ],
+    "u2g6-bubble": [
+        "dig",
+        "u1g4-bar",
+        "u2g10-mirror",
+        "maze",
+        "u2g2-bee",
+        "cats-cocos"
+    ],
+    "u0g1-butterfly": [
+        "u0g2-zebra-space",
+        "u1g5-diner",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "u3g4-snowboard",
+        "u2g7-zebra-sleep",
+        "mg:Read"
+    ],
+    "u1g6-catcode-2": [
+        "Maths",
+        "u1g5-kitties",
+        "u3g9-zebravision",
+        "u3g7-apples",
+        "blocks",
+        "u1g3-ghosts"
+    ],
+    "mg:Cats": [
+        "u1g3-ghosts",
+        "cs:AnimalPuzzle",
+        "dots",
+        "reading",
+        "zebranotes-game",
+        "u2g10-mirror"
+    ],
+    "lg-colorbook": [
+        "magicPaint",
+        "u2g11-puzzleroom",
+        "cs:AnimalPuzzle",
+        "lg-constructor-cocos",
+        "u3g5-shadows",
+        "u3g4-snowboard"
+    ],
+    "lg-constructor-cocos": [
+        "puzzleshapes",
+        "cs:AnimalPuzzle",
+        "u3g9-zebravision",
+        "mosaic",
+        "dots",
+        "u2g2-bee"
+    ],
+    "u1g5-diner": [
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "dig",
+        "mosaic",
+        "u1g4-bar",
+        "u1g3-ghosts",
+        "u2g10-mirror"
+    ],
+    "dots": [
+        "zebranotes-game",
+        "u1g5-kitties",
+        "u1g6-catcode-2",
+        "u3g5-shadows",
+        "reading",
+        "u2g2-bee"
+    ],
+    "cs:Fishes": [
+        "u1g3-ghosts",
+        "u0g2-zebra-space",
+        "magicPaint",
+        "u3g4-snowboard",
+        "u1g5-diner",
+        "u1g6-catcode-2"
+    ],
+    "u1g3-ghosts": [
+        "u2g10-mirror",
+        "dots",
+        "Maths",
+        "reading",
+        "u2g11-puzzleroom",
+        "blocks"
+    ],
+    "u2g1-immunity": [
+        "u0g5-zebra-home",
+        "u1g5-diner",
+        "lg-constructor-cocos",
+        "u2g7-zebra-sleep",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "u3g5-shadows"
+    ],
+    "u1g5-kitties": [
+        "u3g7-apples",
+        "cs:AnimalPuzzle",
+        "u0g5-zebra-home",
+        "blocks",
+        "Maths",
+        "mg:Read"
+    ],
+    "magicPaint": [
+        "u2g11-puzzleroom",
+        "mosaic",
+        "u1g6-catcode-2",
+        "u0g5-zebra-home",
+        "zebranotes-game",
+        "u2g7-zebra-sleep"
+    ],
+    "lg-match-one": [
+        "lg-constructor-cocos",
+        "cs:AnimalPuzzle",
+        "puzzleshapes",
+        "cats-cocos",
+        "magicPaint",
+        "u3g9-zebravision"
+    ],
+    "matchone-cocos": [
+        "lg-constructor-cocos",
+        "cs:AnimalPuzzle",
+        "puzzleshapes",
+        "cats-cocos",
+        "magicPaint",
+        "u3g9-zebravision"
+    ],
+    "cs:Memory": [
+        "cs:AnimalPuzzle",
+        "u1g6-catcode-2",
+        "u3g5-shadows",
+        "dots",
+        "u1g5-kitties",
+        "u3g7-apples"
+    ],
+    "u2g4-monsters": [
+        "lg-constructor-cocos",
+        "u2g11-puzzleroom",
+        "blocks",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "u0g5-zebra-home",
+        "u3g4-snowboard"
+    ],
+    "mosaic": [
+        "puzzleshapes",
+        "zebranotes-game",
+        "u0g2-zebra-space",
+        "u3g5-shadows",
+        "u2g10-mirror",
+        "u0g5-zebra-home"
+    ],
+    "maze": [
+        "dig",
+        "blocks",
+        "magicPaint",
+        "puzzleshapes",
+        "dots",
+        "u0g2-zebra-space"
+    ],
+    "u2g10-mirror": [
+        "u3g5-shadows",
+        "dots",
+        "reading",
+        "mosaic",
+        "u3g9-zebravision",
+        "u1g3-ghosts"
+    ],
+    "u3g1-ninja": [
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "dig",
+        "Maths",
+        "u1g4-bar",
+        "u2g7-zebra-sleep",
+        "u3g4-snowboard"
+    ],
+    "u2g11-puzzleroom": [
+        "zebranotes-game",
+        "lg-constructor-cocos",
+        "u0g2-zebra-space",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "u1g3-ghosts",
+        "u3g4-snowboard"
+    ],
+    "lg-puzzleshapes": [
+        "maze",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "u1g5-diner",
+        "blocks",
+        "zebranotes-game",
+        "u0g2-zebra-space"
+    ],
+    "puzzleshapes": [
+        "maze",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "u1g5-diner",
+        "blocks",
+        "zebranotes-game",
+        "u0g2-zebra-space"
+    ],
+    "mg:Read": [
+        "reading",
+        "lg-constructor-cocos",
+        "u0g5-zebra-home",
+        "cats-cocos",
+        "dots",
+        "u1g5-diner"
+    ],
+    "reading": [
+        "mg:Read",
+        "dots",
+        "magicPaint",
+        "cats-cocos",
+        "maze",
+        "dig"
+    ],
+    "u3g5-shadows": [
+        "mosaic",
+        "u2g10-mirror",
+        "u1g6-catcode-2",
+        "dots",
+        "puzzleshapes",
+        "u0g2-zebra-space"
+    ],
+    "u3g4-snowboard": [
+        "u1g4-bar",
+        "dig",
+        "puzzleshapes",
+        "u1g3-ghosts",
+        "maze",
+        "cs:AnimalPuzzle"
+    ],
+    "u0g2-zebra-space": [
+        "dig",
+        "u1g4-bar",
+        "u3g7-apples",
+        "u1g5-diner",
+        "maze",
+        "u3g9-zebravision"
+    ],
+    "u1g1-zebra-chef": [
+        "u1g5-diner",
+        "u2g11-puzzleroom",
+        "Maths",
+        "mosaic",
+        "u1g4-bar",
+        "u2g2-bee"
+    ],
+    "zebrachef": [
+        "u1g5-diner",
+        "u2g11-puzzleroom",
+        "Maths",
+        "mosaic",
+        "u1g4-bar",
+        "u2g2-bee"
+    ],
+    "u2g7-zebra-sleep": [
+        "u3g5-shadows",
+        "u2g10-mirror",
+        "zebranotes-game",
+        "cs:AnimalPuzzle",
+        "u1g5-kitties",
+        "u3g7-apples"
+    ],
+    "u3g9-zebravision": [
+        "zebranotes-game",
+        "u1g3-ghosts",
+        "maze",
+        "u2g10-mirror",
+        "cats-cocos",
+        "blocks"
+    ],
+    "u1g1-music": [
+        "u1g5-diner",
+        "lg-constructor-cocos",
+        "u1g6-catcode-2",
+        "magicPaint",
+        "u2g2-bee",
+        "cs:AnimalPuzzle"
+    ],
+    "zebranotes-game": [
+        "dots",
+        "cs:AnimalPuzzle",
+        "puzzleshapes",
+        "u2g7-zebra-sleep",
+        "reading",
+        "mg:Read"
+    ],
+    "dig": [
+        "maze",
+        "u1g3-ghosts",
+        "cats-cocos",
+        "u1g5-diner",
+        "u2g10-mirror",
+        "u3g5-shadows"
+    ],
+    "island-cocos": [
+        "puzzleshapes",
+        "u0g5-zebra-home",
+        "Maths",
+        "zebranotes-game",
+        "mosaic",
+        "blocks"
+    ],
+    "Maths": [
+        "blocks",
+        "u1g6-catcode-2",
+        "u1g5-diner",
+        "u3g7-apples",
+        "mosaic",
+        "u0g2-zebra-space"
+    ],
+    "math-unity": [
+        "blocks",
+        "u1g6-catcode-2",
+        "u1g5-diner",
+        "u3g7-apples",
+        "mosaic",
+        "u0g2-zebra-space"
+    ],
+    "u0g5-zebra-home": [
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "magicPaint",
+        "blocks",
+        "u2g11-puzzleroom",
+        "u1g5-kitties",
+        "zebranotes-game"
+    ],
+    "meta-game": [
+        "mosaic",
+        "u2g11-puzzleroom",
+        "u1g6-catcode-2",
+        "u0g5-zebra-home",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "u3g7-apples"
+    ],
+    "island-unity-game": [
+        "puzzleshapes",
+        "u0g5-zebra-home",
+        "Maths",
+        "zebranotes-game",
+        "mosaic",
+        "blocks"
+    ],
+    "diner": [
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "dig",
+        "mosaic",
+        "u1g4-bar",
+        "u1g3-ghosts",
+        "u2g10-mirror"
+    ],
+    "cats_3": [
+        "u1g3-ghosts",
+        "cs:AnimalPuzzle",
+        "dots",
+        "reading",
+        "zebranotes-game",
+        "u2g10-mirror"
+    ],
+    "sandbox1": [
+        "u0g5-zebra-home",
+        "u1g1-zebra-chef",
+        "zebrachef",
+        "maze",
+        "u1g5-kitties",
+        "u2g11-puzzleroom",
+        "blocks"
+    ]
+}
