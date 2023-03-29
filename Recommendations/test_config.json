@@ -4,6 +4,7 @@
         "u1g5-kitties|Kitties",
         "zebranotes-game|Zebranotes",
         "Maths|Maths",
+        "math-unity|maths_main",
         "u1g6-catcode-2|Catcode-2",
         "u2g2-bee|Bee"
     ],
@@ -29,6 +30,7 @@
         "u0g5-zebra-home|Playroom",
         "puzzleshapes|PuzzleShapes-2",
         "Maths|Maths",
+        "math-unity|maths_main",
         "u1g3-ghosts|Ghosts"  
     ],
     "u2g6-bubble": [
@@ -41,6 +43,7 @@
     ],
     "u1g6-catcode-2": [
         "Maths|Maths",
+        "math-unity|maths_main",
         "u1g5-kitties|Kitties",
         "u3g9-zebravision|Zebravision",
         "u3g7-apples|Apples",
@@ -75,6 +78,7 @@
         "u2g10-mirror|Mirror-2",
         "dots|Dots",
         "Maths|Maths",
+        "math-unity|maths_main",
         "reading|Reading",
         "u3g10-puzzleroom|PuzzleRoom",
         "blocks|Blocks"
@@ -93,6 +97,7 @@
         "u0g5-zebra-home|Playroom",
         "blocks|Blocks",
         "Maths|Maths",
+        "math-unity|maths_main",
         "mg:Read|Read_Bridges"
     ],
     "magicPaint": [
@@ -147,6 +152,7 @@
         "zebrachef|Zebra-Chef-2",
         "dig|Dig-2",
         "Maths|Maths",
+        "math-unity|maths_main",
         "u1g4-bar|Bar",
         "u2g7-zebra-sleep|ZebraSleep",
         "u3g4-snowboard|Snowboard"
@@ -219,6 +225,7 @@
         "u1g5-diner|Diner",
         "u3g10-puzzleroom|PuzzleRoom",
         "Maths|Maths",
+        "math-unity|maths_main",
         "mosaic|Mosaic-2",
         "u1g4-bar|Bar",
         "u2g2-bee|Bee"
@@ -267,6 +274,7 @@
         "puzzleshapes|PuzzleShapes-2",
         "u0g5-zebra-home|Playroom",
         "Maths|Maths",
+        "math-unity|maths_main",
         "zebranotes-game|Zebranotes",
         "mosaic|Mosaic-2",
         "blocks|Blocks"
@@ -307,6 +315,7 @@
         "puzzleshapes|PuzzleShapes-2",
         "u0g5-zebra-home|Playroom",
         "Maths|Maths",
+        "math-unity|maths_main",
         "zebranotes-game|Zebranotes",
         "mosaic|Mosaic-2",
         "blocks|Blocks"
