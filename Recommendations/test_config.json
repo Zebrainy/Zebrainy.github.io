@@ -132,7 +132,7 @@
     "math-unity|maths_main",
     "Maths|Maths",
     "reading|Reading",
-    "u2g11-puzzleroom|PuzzleRoom",
+    "u3g10-puzzleroom|PuzzleRoom",
     "blocks|Blocks"
     ],
     "u2g1-immunity": [
@@ -163,7 +163,7 @@
     "mg:Read|Read_Bridges"
     ],
     "magicPaint": [
-    "u2g11-puzzleroom|PuzzleRoom",
+    "u3g10-puzzleroom|PuzzleRoom",
     "mosaic|Mosaic-2",
     "u1g6-catcode-2|Catcode-2",
     "u0g5-zebra-home|Playroom",
@@ -207,9 +207,9 @@
     ],
     "meta-game": [
     "mosaic|Mosaic-2",
-    "u2g11-puzzleroom|PuzzleRoom",
+    "u3g10-puzzleroom|PuzzleRoom",
     "u1g6-catcode-2|Catcode-2",
-    "u2g11-puzzleroom|PuzzleRoom",
+    "u3g10-puzzleroom|PuzzleRoom",
     "zebrachef|Zebra-Chef-2",
     "u3g7-apples|Apples"
     ],
@@ -251,11 +251,11 @@
     "sandbox1|Sandbox-1",
     "magicPaint|MagicPaint-2",
     "blocks|Blocks",
-    "u2g11-puzzleroom|PuzzleRoom",
+    "u3g10-puzzleroom|PuzzleRoom",
     "u1g5-kitties|Kitties",
     "zebranotes-game|Zebranotes"
     ],
-    "u2g11-puzzleroom": [
+    "u3g10-puzzleroom": [
     "zebranotes-game|Zebranotes",
     "lg-constructor-cocos|ConstructorCC",
     "u0g2-zebra-space|Space",
@@ -286,7 +286,7 @@
     "zebrachef|Zebra-Chef-2",
     "maze|Maze-2",
     "u1g5-kitties|Kitties",
-    "u2g11-puzzleroom|PuzzleRoom",
+    "u3g10-puzzleroom|PuzzleRoom",
     "blocks|Blocks"
     ],
     "u3g5-shadows": [
@@ -318,7 +318,7 @@
     "zebrachef": [
     "u1g5-diner|Diner",
     "diner|Diner-2",
-    "u2g11-puzzleroom|PuzzleRoom",
+    "u3g10-puzzleroom|PuzzleRoom",
     "math-unity|maths_main",
     "Maths|Maths",
     "mosaic|Mosaic-2",
@@ -381,7 +381,7 @@
     ],
     "u2g4-monsters": [
     "lg-constructor-cocos|ConstructorCC",
-    "u2g11-puzzleroom|PuzzleRoom",
+    "u3g10-puzzleroom|PuzzleRoom",
     "blocks|Blocks",
     "zebrachef|Zebra-Chef-2",
     "sandbox1|Sandbox-1",
