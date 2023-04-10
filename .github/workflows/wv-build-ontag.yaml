@@ -65,7 +65,7 @@ jobs:
         run: yarn
 
       - name: Build project
-        run: yarn ${{ inputs.build_command }}
+        run: export NODE_OPTIONS=--max_old_space_size=8192 && yarn ${{ inputs.build_command }}
 
       - name: Install node dependencies
         run: yarn add directory-tree
