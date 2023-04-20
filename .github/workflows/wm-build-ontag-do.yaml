@@ -1,4 +1,4 @@
-name: Reusable workflow - Build image on Tag Pushka - yc
+name: Reusable workflow - Build image on Tag Pushka - do
 
 on:
   workflow_call:
@@ -37,7 +37,7 @@ jobs:
         with:
           token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           repository: Zebrainy/k8s
-          ref: dev-yc
+          ref: dev
 
       - name: Kustomize 
         run: |
@@ -47,7 +47,28 @@ jobs:
         uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
-          push-branch: 'dev-yc'
+          push-branch: 'dev'
           commit-message: 'Update ${{ github.repository	}} to ${{ env.VERSION }}'
           force-add: 'true'
           name: Jnqa-ci
+
+      - name: Clear repo for the next checkout
+        run: sudo rm -rf ** && sudo find . -name . -o -prune -exec rm -rf -- {} +
+
+      - name: Checkout k8s
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
+          repository: Zebrainy/k8s
+          
+      - name: Kustomize 
+        run: |
+          (cd ./deployments/${{ inputs.repository_name }}/ && kustomize edit set image IMAGENAME=ghcr.io/zebrainy/${{ inputs.repository_name }}:${{ env.VERSION }})
+            
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: ${{ inputs.repository_name }}
+          token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
+          commit-message: Upgraded  ${{ github.repository }} to ${{ env.VERSION }}
+          title: 🆕 Upgraded ${{ github.repository }} to ${{ env.VERSION }}

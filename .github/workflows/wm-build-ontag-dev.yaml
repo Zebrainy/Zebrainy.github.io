@@ -37,7 +37,7 @@ jobs:
         with:
           token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           repository: Zebrainy/k8s
-          ref: dev
+          ref: dev-yc
 
       - name: Kustomize 
         run: |
@@ -47,7 +47,7 @@ jobs:
         uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
-          push-branch: 'dev'
+          push-branch: 'dev-yc'
           commit-message: 'Update ${{ github.repository	}} to ${{ env.VERSION }}'
           force-add: 'true'
           name: Jnqa-ci

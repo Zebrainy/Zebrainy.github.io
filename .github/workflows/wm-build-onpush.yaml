@@ -1,4 +1,4 @@
-name: Reusable workflow - Build latest image - do
+name: Reusable workflow - Build latest image - yc
 
 on:
   workflow_call:
@@ -19,16 +19,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-#     - name: Build and Push
-#         uses: docker/build-push-action@v1
-#         with:
-#           username: ${{ github.actor }}
-#           password: ${{ secrets.CI_GITHUB_TOKEN }}
-#           registry: ghcr.io
-#           repository: zebrainy/${{ inputs.repository_name }}
-#           tags: latest
-      
+              
       - name: package-version
         run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
 
@@ -39,4 +30,4 @@ jobs:
           github_repo: ${{ github.repository }}
           version: ${{ env.PACKAGE_VERSION }}
           git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "do-v"
+          git_tag_prefix: "v"
