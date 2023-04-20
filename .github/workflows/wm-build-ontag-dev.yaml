@@ -1,4 +1,4 @@
-name: Reusable workflow - Build image on Tag Pushka - dev
+name: Reusable workflow - Build image on Tag Pushka - dev - do
 
 on:
   workflow_call:

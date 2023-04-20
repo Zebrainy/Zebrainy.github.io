@@ -1,4 +1,4 @@
-name: Reusable workflow - Build latest image
+name: Reusable workflow - Build latest image - yc
 
 on:
   workflow_call:
@@ -30,4 +30,4 @@ jobs:
           github_repo: ${{ github.repository }}
           version: ${{ env.PACKAGE_VERSION }}
           git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "yc-v"
+          git_tag_prefix: "v"
