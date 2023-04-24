@@ -38,8 +38,3 @@ jobs:
           wget "https://storage.yandexcloud.net/cloud-certs/CA.pem" \
           --output-document ~/.mongodb/root.crt && \
           chmod 0644 ~/.mongodb/root.crt
-
-      - name: Set depend
-        run: |
-          sudo apt update && sudo apt install --yes nodejs npm && \
-          npm install mongodb
