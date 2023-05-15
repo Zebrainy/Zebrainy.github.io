@@ -26,7 +26,7 @@ jobs:
           s3dirname: configs
           bucketname: web-bundles
           AWS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_SELECTEL }}
-          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_SELECTEL }}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_SELECTEL }}      
             
       - name: Upload to S3 AWS
         uses: Zebrainy/s3-sync-action@v2
