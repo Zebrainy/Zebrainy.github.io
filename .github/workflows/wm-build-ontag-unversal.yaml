@@ -21,7 +21,6 @@ jobs:
       - name: Get the version
         run: | 
           echo "VERSION=$(echo $GITHUB_REF | cut -d / -f 3)" >> $GITHUB_ENV
-          echo ${{ github.ref }}
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -49,6 +48,11 @@ jobs:
          echo "k8s_dev_branch=$(node map_tag_to_k8s_branch.js ${{ github.ref }} dev)" >> $GITHUB_OUTPUT
          echo "k8s_prod_branch=$(node map_tag_to_k8s_branch.js ${{ github.ref }} prod)" >> $GITHUB_OUTPUT
   
+      - name: Log branch name
+        run: |
+          echo "k8s_dev_branch: ${{ steps.branch.outputs.k8s_dev_branch }}"
+          echo "k8s_prod_branch: ${{ steps.branch.outputs.k8s_prod_branch }}"
+          
       - name: Checkout k8s (dev branch)
         uses: actions/checkout@v2
         with:
