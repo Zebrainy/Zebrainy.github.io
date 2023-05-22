@@ -44,8 +44,8 @@ jobs:
       - name: Get branch name
         id: branch
         run: |
-         echo "k8s_dev_branch=$(node map_tag_to_k8s_branch.js ${{ github.ref }}) dev" >> $GITHUB_OUTPUT
-         echo "k8s_prod_branch=$(node map_tag_to_k8s_branch.js ${{ github.ref }}) prod" >> $GITHUB_OUTPUT
+         echo "k8s_dev_branch=$(node map_tag_to_k8s_branch.js ${{ github.ref }} dev)" >> $GITHUB_OUTPUT
+         echo "k8s_prod_branch=$(node map_tag_to_k8s_branch.js ${{ github.ref }} prod)" >> $GITHUB_OUTPUT
   
       - name: Checkout k8s (dev branch)
         uses: actions/checkout@v2
