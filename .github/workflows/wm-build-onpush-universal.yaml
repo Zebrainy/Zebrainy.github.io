@@ -7,7 +7,7 @@ on:
         required: true
         type: string
     secrets:
-      GITHUB_TOKEN:
+      CI_GITHUB_TOKEN:
         required: true
       ORG_PERSONAL_ACCESS_TOKEN:
         required: true
