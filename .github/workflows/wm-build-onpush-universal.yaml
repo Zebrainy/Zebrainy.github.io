@@ -34,7 +34,7 @@ jobs:
       - name: Get tag name
         id: tag
         run: |
-         echo "tag_name=$(node map_github_ref_to_tag ${{ github.ref }})" >> $GITHUB_OUTPUT
+         echo "tag_name=$(node map_github_ref_to_tag.js ${{ github.ref }})" >> $GITHUB_OUTPUT
 
       - name: Tag new version
         uses: pkgdeps/action-package-version-to-git-tag@v2.0.2
