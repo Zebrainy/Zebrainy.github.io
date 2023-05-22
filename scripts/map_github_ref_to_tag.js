@@ -5,7 +5,9 @@ if (!GITHUB_REF) console.error(`please provide github ref!`), process.exit(1)
 const tags = {
 	"dev-yc": "dev-yc-v",
 	"main-yc": "yc-v",
+	"master-yc": "yc-v",
 	main: "do-v",
+	master: "do-v",
 	dev: "dev-do-v",
 }
 
