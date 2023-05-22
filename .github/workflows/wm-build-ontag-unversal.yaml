@@ -7,7 +7,7 @@ on:
         required: true
         type: string
     secrets:
-      CI_GITHUB_TOKEN:
+      GITHUB_TOKEN:
         required: true
       ORG_PERSONAL_ACCESS_TOKEN:
         required: true
@@ -29,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           username: ${{ github.actor }}
-          password: ${{ secrets.CI_GITHUB_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           repository: zebrainy/${{ inputs.repository_name }}
           tags: ${{ env.VERSION }}
@@ -52,7 +52,7 @@ jobs:
         run: |
           echo "k8s_dev_branch: ${{ steps.branch.outputs.k8s_dev_branch }}"
           echo "k8s_prod_branch: ${{ steps.branch.outputs.k8s_prod_branch }}"
-          
+
       - name: Checkout k8s (dev branch)
         uses: actions/checkout@v2
         with:
