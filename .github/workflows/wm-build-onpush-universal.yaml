@@ -6,9 +6,6 @@ on:
       repository_name:
         required: true
         type: string
-      tag: 
-        required: true
-        type: string
     secrets:
       CI_GITHUB_TOKEN:
         required: true
@@ -26,6 +23,19 @@ jobs:
       - name: package-version
         run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
 
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.x'
+
+      - name: Download script 
+        run: curl https://zebrainy.github.io/scripts/map_github_ref_to_tag.js > map_github_ref_to_tag.js
+
+      - name: Get tag name
+        id: tag
+        run: |
+         echo "tag_name=$(node map_github_ref_to_tag ${{ github.ref }})" >> $GITHUB_OUTPUT
+
       - name: Tag new version
         uses: pkgdeps/action-package-version-to-git-tag@v2.0.2
         with:
@@ -33,4 +43,4 @@ jobs:
           github_repo: ${{ github.repository }}
           version: ${{ env.PACKAGE_VERSION }}
           git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: ${{ inputs.tag }}
+          git_tag_prefix: ${{ steps.tag.outputs.tag_name }}
