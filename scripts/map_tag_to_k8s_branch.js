@@ -18,6 +18,6 @@ const tags = {
 	},
 }
 
-const find = Object.keys(tags[ENV]).find((key) => key.startsWith(GITHUB_TAG))
+const find = Object.keys(tags[ENV]).find((key) => GITHUB_TAG.startsWith(key))
 console.log(console.log(find))
 process.exit(0)
