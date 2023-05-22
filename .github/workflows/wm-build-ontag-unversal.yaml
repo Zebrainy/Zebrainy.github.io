@@ -68,9 +68,11 @@ jobs:
           name: Jnqa-ci
       
       - name: Clear repo for the next checkout
+        if: ${{ steps.branch.outputs.k8s_prod_branch != ""  }}
         run: sudo rm -rf ** && sudo find . -name . -o -prune -exec rm -rf -- {} +
 
       - name: Checkout k8s
+        if: ${{ steps.branch.outputs.k8s_prod_branch != ""  }}
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
@@ -78,10 +80,12 @@ jobs:
           ref: ${{ steps.branch.outputs.k8s_prod_branch }}
           
       - name: Kustomize 
+        if: ${{ steps.branch.outputs.k8s_prod_branch != ""  }}
         run: |
           (cd ./deployments/${{ inputs.repository_name }}/ && kustomize edit set image IMAGENAME=ghcr.io/zebrainy/${{ inputs.repository_name }}:${{ env.VERSION }})
             
       - name: Create pull request
+        if: ${{ steps.branch.outputs.k8s_prod_branch != ""  }}
         uses: peter-evans/create-pull-request@v3
         with:
           branch: ${{ inputs.repository_name }}
