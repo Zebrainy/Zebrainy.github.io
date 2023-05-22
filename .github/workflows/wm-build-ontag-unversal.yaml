@@ -6,20 +6,12 @@ on:
       repository_name:
         required: true
         type: string
-      k8s_dev_branch:
-        required: true
-        type: string # dev-yc | dev
-      k8s_prod_branch:
-        required: true
-        type: string # prod-yc | prod
     secrets:
       CI_GITHUB_TOKEN:
         required: true
       ORG_PERSONAL_ACCESS_TOKEN:
         required: true
 
-env: 
-    PR_EMOJI: ${{ fromJson('{"prod-yc":"🟡🆕","prod":"🆕"}')[inputs.k8s_prod_branch] }}
 
 jobs:
   push_to_registry:
@@ -41,12 +33,26 @@ jobs:
           repository: zebrainy/${{ inputs.repository_name }}
           tags: ${{ env.VERSION }}
       
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.x'
+  
+      - name: Download script 
+        run: curl https://zebrainy.github.io/scripts/map_tag_to_k8s_branch.js > map_tag_to_k8s_branch.js
+      
+      - name: Get branch name
+        id: branch
+        run: |
+         echo "k8s_dev_branch=$(node map_tag_to_k8s_branch.js ${{ github.ref }}) dev" >> $GITHUB_OUTPUT
+         echo "k8s_prod_branch=$(node map_tag_to_k8s_branch.js ${{ github.ref }}) prod" >> $GITHUB_OUTPUT
+  
       - name: Checkout k8s (dev branch)
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           repository: Zebrainy/k8s
-          ref: ${{ inputs.k8s_dev_branch }}
+          ref: ${{ steps.branch.outputs.k8s_dev_branch }}
 
       - name: Kustomize 
         run: |
@@ -56,7 +62,7 @@ jobs:
         uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
-          push-branch: ${{ inputs.k8s_dev_branch }}
+          push-branch: ${{ steps.branch.outputs.k8s_dev_branch }}
           commit-message: 'Update ${{ github.repository	}} to ${{ env.VERSION }}'
           force-add: 'true'
           name: Jnqa-ci
@@ -69,7 +75,7 @@ jobs:
         with:
           token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           repository: Zebrainy/k8s
-          ref: ${{ inputs.k8s_prod_branch }}
+          ref: ${{ steps.branch.outputs.k8s_prod_branch }}
           
       - name: Kustomize 
         run: |
@@ -81,6 +87,6 @@ jobs:
           branch: ${{ inputs.repository_name }}
           token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
           commit-message: Upgraded  ${{ github.repository }} to ${{ env.VERSION }}
-          title: ${{ env.PR_EMOJI }} Upgraded ${{ github.repository }} to ${{ env.VERSION }}
-          base: ${{ inputs.k8s_prod_branch }}
+          title: ${{ fromJson('{"prod-yc":"🟡🆕","prod":"🆕"}')[steps.branch.outputs.k8s_prod_branch] }} Upgraded ${{ github.repository }} to ${{ env.VERSION }}
+          base: ${{ steps.branch.outputs.k8s_prod_branch }}
           
