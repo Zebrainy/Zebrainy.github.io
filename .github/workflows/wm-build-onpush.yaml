@@ -1,4 +1,4 @@
-name: Reusable workflow - Build latest image - do
+name: Reusable workflow - Update actions
 
 on:
   workflow_call:
@@ -19,24 +19,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-#     - name: Build and Push
-#         uses: docker/build-push-action@v1
-#         with:
-#           username: ${{ github.actor }}
-#           password: ${{ secrets.CI_GITHUB_TOKEN }}
-#           registry: ghcr.io
-#           repository: zebrainy/${{ inputs.repository_name }}
-#           tags: latest
       
-      - name: package-version
-        run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
-
-      - name: Tag new version
-        uses: pkgdeps/action-package-version-to-git-tag@v2.0.2
+      - name: Update Action 
+        run: |
+          # rm .github/workflows/*.yaml - к примеру лишнее убрать
+          wget "<url нового action>" --output-document .github/workflows/onpush.yaml
+          # wget "<url нового action>" --output-document .github/workflows/ontag.yaml - остальные
+     
+      - name: Push to Master branch
+        uses: github-actions-x/commit@v2.9
         with:
-          github_token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
-          github_repo: ${{ github.repository }}
-          version: ${{ env.PACKAGE_VERSION }}
-          git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v-do"
+          github-token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
+          push-branch: 'master'
+          commit-message: 'Update ${{ github.repository	}} to ${{ env.VERSION }}'
+          force-add: 'true'
+          name: Zebrainy-ci
