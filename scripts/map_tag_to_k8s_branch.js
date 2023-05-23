@@ -3,7 +3,7 @@ let [, , GITHUB_TAG, ENV] = process.argv
 if (!GITHUB_TAG) console.error(`please provide github tag!`), process.exit(1)
 if (!ENV) console.error(`please provide env!`), process.exit(1)
 
-GITHUB_TAG = GITHUB_TAG.replace(/refs\/.*\//, "")
+GITHUB_TAG = GITHUB_TAG.replace(/refs\/[^\/]*\//, "")
 
 const tags = {
 	dev: {
