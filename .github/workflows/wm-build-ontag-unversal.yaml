@@ -96,7 +96,7 @@ jobs:
         with:
           branch: ${{ inputs.repository_name }}
           token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
-          commit-message: Upgraded  ${{ github.repository }} to ${{ env.VERSION }}
-          title: ${{ fromJson('{"prod-yc":"🟡🆕","prod":"🆕"}')[steps.branch.outputs.k8s_prod_branch] }} Upgraded ${{ github.repository }} to ${{ env.VERSION }}
+          commit-message: Upgraded ${{ github.repository }} to ${{ env.VERSION }}
+          title: ${{ fromJson('{"prod-yc":"🟡🆕","master":"🆕"}')[steps.branch.outputs.k8s_prod_branch] }} Upgraded ${{ github.repository }} to ${{ env.VERSION }}
           base: ${{ steps.branch.outputs.k8s_prod_branch }}
           
