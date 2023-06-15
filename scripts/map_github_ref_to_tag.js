@@ -6,9 +6,9 @@ const tags = {
 	"dev-yc": "dev-yc-v",
 	"main-yc": "yc-v",
 	"master-yc": "yc-v",
-	main: "do-v",
-	master: "do-v",
-	dev: "dev-do-v",
+	main: "yc-v",
+	master: "yc-v",
+	dev: "dev-yc-v",
 }
 
 let [, , ...rest] = GITHUB_REF.split("/")
