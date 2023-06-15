@@ -5,7 +5,8 @@
         "magicPaint",
         "dots",
         "lg-constructor-cocos",
-        "mg:Read"
+        "mg:Read",
+        "bridges"
     ],
     "u3g7-apples": [
         "u1g3-ghosts",
@@ -160,7 +161,8 @@
         "blocks",
         "math-unity",
         "Maths",
-        "mg:Read"
+        "mg:Read",
+        "bridges"
     ],
     "magicPaint": [
         "u3g10-puzzleroom",
@@ -274,6 +276,7 @@
     ],
     "reading": [
         "mg:Read",
+        "bridges",
         "dots",
         "magicPaint",
         "mg:Cats",
@@ -340,7 +343,8 @@
         "puzzleshapes",
         "u2g7-zebra-sleep",
         "reading",
-        "mg:Read"
+        "mg:Read",
+        "bridges"
     ],
     "u3g9-zebravision": [
         "zebranotes-game",
