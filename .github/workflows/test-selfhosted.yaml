@@ -7,8 +7,6 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
-    tags:
-      - k8s-agent 
+    runs-on: [self-hosted, selfhosted-ru]
     steps:
       - run: echo $HOSTNAME
