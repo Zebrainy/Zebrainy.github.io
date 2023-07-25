@@ -7,6 +7,6 @@ on:
 
 jobs:
   build:
-    runs-on: [selfhosted-ru]
+    runs-on: [selfhosted]
     steps:
       - run: echo $HOSTNAME
