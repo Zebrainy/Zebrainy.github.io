@@ -1,0 +1,14 @@
+name: Test SH-ru
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+    tags:
+      - k8s-agent 
+    steps:
+      - run: echo $HOSTNAME
