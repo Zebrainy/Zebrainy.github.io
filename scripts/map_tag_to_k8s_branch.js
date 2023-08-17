@@ -7,15 +7,15 @@ GITHUB_TAG = GITHUB_TAG.replace(/refs\/.*\//, "")
 
 const tags = {
 	dev: {
-		"dev-yc-v": "dev-yc",
-		"yc-v": "dev-yc",
-		"do-v": "dev",
-		"dev-do-v": "dev",
+		"dev-yc-v": "dev",
+		"yc-v": "dev",
+		"v": "dev",
+		"dev-v": "dev",
 	},
 	prod: {
 		"dev-yc-v": "",
-		"yc-v": "prod-yc",
-		"do-v": "master",
+		"v": "master",
+		"yc-v": "master",
 		"dev-do-v": "",
 	},
 }
