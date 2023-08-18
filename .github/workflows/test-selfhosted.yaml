@@ -1,0 +1,12 @@
+name: Test SH-ru
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+    steps:
+      - run: echo $HOSTNAME

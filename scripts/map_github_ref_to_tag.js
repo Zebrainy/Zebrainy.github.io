@@ -6,6 +6,7 @@ const tags = {
 	"dev-yc": "dev-v",
 	"main-yc": "v",
 	main: "v",
+  master: "v",
 	dev: "dev-v",
 }
 

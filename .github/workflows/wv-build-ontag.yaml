@@ -101,8 +101,8 @@ jobs:
       - name: Print URLs
         run: |
           echo Selectel:
-          echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ env.bundle_name }}/${{ env.VERSION }}/index.html"
-          echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ env.bundle_name }}/${{ env.VERSION }}.zip"
+          echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html"
+          echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip"
       
       - name: Create build metadata in Squidex
         run: |
