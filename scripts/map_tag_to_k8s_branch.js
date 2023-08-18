@@ -7,8 +7,6 @@ GITHUB_TAG = GITHUB_TAG.replace(/refs\/[^\/]*\//, "")
 
 const tags = {
 	dev: {
-		"dev-yc-v": "dev",
-		"yc-v": "dev",
 		"v": "dev",
 		"dev-v": "dev",
 	},
