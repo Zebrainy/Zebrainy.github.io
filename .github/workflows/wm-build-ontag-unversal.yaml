@@ -100,3 +100,35 @@ jobs:
           title: ${{ fromJson('{"prod-yc":"🟡🆕","master":"🆕"}')[steps.branch.outputs.k8s_prod_branch] }} Upgraded ${{ github.repository }} to ${{ env.VERSION }}
           base: ${{ steps.branch.outputs.k8s_prod_branch }}
           
+      # paint
+      - name: Clear repo for the next checkout
+        if: ${{ steps.branch.outputs.k8s_prod_branch != '' }}
+        run: sudo rm -rf ** && sudo find . -name . -o -prune -exec rm -rf -- {} +
+      
+      - name: Checkout k8s
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
+          repository: Zebrainy/k8s-paint
+          ref: main
+
+      - name: Get branch name
+        id: service-exists
+        run: |
+          [[ -d /deployments/${{ inputs.repository_name }} ]] && echo "service-exists=true" || echo "service-exists=false"
+          echo "service-exists=$service-exists" >> $GITHUB_OUTPUT
+
+      - name: Kustomize 
+        if: ${{ steps.service-exists.outputs.service-exists == 'true'  }}
+        run: |
+          (cd ./deployments/${{ inputs.repository_name }}/ && kustomize edit set image IMAGENAME=ghcr.io/zebrainy/${{ inputs.repository_name }}:${{ env.VERSION }})
+
+      - name: Create pull request
+        if: ${{ steps.service-exists.outputs.service-exists == 'true'  }}
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: ${{ inputs.repository_name }}
+          token: ${{ secrets.ORG_PERSONAL_ACCESS_TOKEN }}
+          commit-message: Upgraded ${{ github.repository }} to ${{ env.VERSION }}
+          title: 🎨🆕 Upgraded ${{ github.repository }} to ${{ env.VERSION }}
+          base: main
