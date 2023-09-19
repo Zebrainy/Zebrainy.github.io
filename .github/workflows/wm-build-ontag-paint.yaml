@@ -43,19 +43,16 @@ jobs:
           repository: Zebrainy/k8s-paint
           ref: main
 
-      - name: Get branch name
-        id: service-exists
-        run: |
-          [[ -d ./deployments/${{ inputs.repository_name }} ]] && echo "service-exists=true" || echo "service-exists=false"
-          echo "service-existance=$service-exists" >> $GITHUB_ENV
+      - run: | 
+          [[ -d ./deployments/${{ inputs.repository_name }} ]] && echo "EXISTENCE=true" >> $GITHUB_ENV || echo "EXISTENCE=false" >> $GITHUB_ENV
 
       - name: Kustomize 
-        if: ${{ env.service-existance == 'true'  }}
+        if: ${{ env.EXISTENCE == 'true'  }}
         run: |
           (cd ./deployments/${{ inputs.repository_name }}/ && kustomize edit set image IMAGENAME=ghcr.io/zebrainy/${{ inputs.repository_name }}:${{ env.VERSION }})
 
       - name: Create pull request
-        if: ${{ env.service-existance == 'true'  }}
+        if: ${{ env.EXISTENCE == 'true'  }}
         uses: peter-evans/create-pull-request@v3
         with:
           branch: ${{ inputs.repository_name }}
@@ -64,4 +61,4 @@ jobs:
           title: 🎨🆕 Upgraded ${{ github.repository }} to ${{ env.VERSION }}
           base: main
 
-      - run: echo "service existance = ${{ env.service-existance }}"
+      - run: echo "service existence = ${{ env.EXISTENCE }}"
