@@ -119,12 +119,12 @@ jobs:
           echo "service-exists=$service-exists" >> $GITHUB_OUTPUT
 
       - name: Kustomize 
-        if: ${{ env.service-exists == 'true'  }}
+        if: ${{ env.service-exists == true  }}
         run: |
           (cd ./deployments/${{ inputs.repository_name }}/ && kustomize edit set image IMAGENAME=ghcr.io/zebrainy/${{ inputs.repository_name }}:${{ env.VERSION }})
 
       - name: Create pull request
-        if: ${{ env.service-exists == 'true'  }}
+        if: ${{ env.service-exists == true  }}
         uses: peter-evans/create-pull-request@v3
         with:
           branch: ${{ inputs.repository_name }}
