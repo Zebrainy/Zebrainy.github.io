@@ -47,7 +47,7 @@ jobs:
         id: service-exists
         run: |
           [[ -d ./deployments/${{ inputs.repository_name }} ]] && echo "service-exists=true" || echo "service-exists=false"
-          echo "service-exists=$service-exists" >> $GITHUB_OUTPUT
+          echo "service-exists=$service-exists" >> $GITHUB_ENV
 
       - name: Kustomize 
         if: ${{ env.service-exists == true  }}
