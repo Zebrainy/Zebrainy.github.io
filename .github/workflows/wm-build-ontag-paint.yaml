@@ -46,7 +46,7 @@ jobs:
       - name: Get branch name
         id: service-exists
         run: |
-          [[ -d /deployments/${{ inputs.repository_name }} ]] && echo "service-exists=true" || echo "service-exists=false"
+          [[ -d ./deployments/${{ inputs.repository_name }} ]] && echo "service-exists=true" || echo "service-exists=false"
           echo "service-exists=$service-exists" >> $GITHUB_OUTPUT
 
       - name: Kustomize 
