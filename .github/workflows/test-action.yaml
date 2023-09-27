@@ -1,0 +1,25 @@
+name: Test Action
+
+on:
+  push:
+    branches:
+      - test-action
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Some magic
+        run: |
+          echo test > test.ini
+
+      - name: Upload artif
+        uses: actions/upload-artifact@v2
+        with:
+          name: test
+          path: test.ini
+          retention-days: 1
