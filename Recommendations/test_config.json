@@ -8,15 +8,15 @@
         "mg:Read",
         "bridges"
     ],
-    "u3g7-apples": [
-        "u1g3-ghosts",
-        "u1g5-kitties",
+    "animalpuzzle": [
         "zebranotes-game",
-        "math-unity",
-        "Maths",
-        "u1g6-catcode-2",
-        "u2g2-bee"
-    ],
+        "sandbox1",
+        "magicPaint",
+        "dots",
+        "lg-constructor-cocos",
+        "mg:Read",
+        "bridges"
+    ],    
     "u1g4-bar": [
         "u1g5-diner",
         "diner",
