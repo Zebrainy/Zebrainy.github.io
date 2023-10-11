@@ -66,6 +66,7 @@
     "mg:Cats": [
         "u1g3-ghosts",
         "cs:AnimalPuzzle",
+        "animalpuzzle",
         "dots",
         "reading",
         "zebranotes-game",
@@ -75,6 +76,7 @@
     "cats_3": [
         "u1g3-ghosts",
         "cs:AnimalPuzzle",
+        "animalpuzzle",
         "dots",
         "reading",
         "zebranotes-game",
@@ -84,6 +86,7 @@
     "lg-constructor-cocos": [
         "puzzleshapes",
         "cs:AnimalPuzzle",
+        "animalpuzzle",
         "u3g9-zebravision",
         "mosaic",
         "dots",
@@ -157,6 +160,7 @@
     "u1g5-kitties": [
         "u3g7-apples",
         "cs:AnimalPuzzle",
+        "animalpuzzle",
         "u0g5-zebra-home",
         "blocks",
         "math-unity",
@@ -175,6 +179,7 @@
     "matchone-cocos": [
         "lg-constructor-cocos",
         "cs:AnimalPuzzle",
+        "animalpuzzle",
         "puzzleshapes",
         "mg:Cats",
         "cats_3|letters",
@@ -201,6 +206,7 @@
     ],
     "cs:Memory": [
         "cs:AnimalPuzzle",
+        "animalpuzzle",
         "u1g6-catcode-2",
         "u3g5-shadows",
         "dots",
@@ -307,7 +313,8 @@
         "puzzleshapes",
         "u1g3-ghosts",
         "maze",
-        "cs:AnimalPuzzle"
+        "cs:AnimalPuzzle",
+        "animalpuzzle"
     ],
     "u0g2-zebra-space": [
         "dig",
@@ -340,6 +347,7 @@
     "zebranotes-game": [
         "dots",
         "cs:AnimalPuzzle",
+        "animalpuzzle",
         "puzzleshapes",
         "u2g7-zebra-sleep",
         "reading",
@@ -363,7 +371,8 @@
         "u1g6-catcode-2",
         "magicPaint",
         "u2g2-bee",
-        "cs:AnimalPuzzle"
+        "cs:AnimalPuzzle",
+        "animalpuzzle"
     ],
     "maze": [
         "dig",
@@ -409,5 +418,14 @@
         "dots",
         "u1g5-kitties",
         "u3g7-apples"
+    ],
+    "constructor-unity": [
+        "puzzleshapes",
+        "cs:AnimalPuzzle",
+        "animalpuzzle",
+        "u3g9-zebravision",
+        "mosaic",
+        "dots",
+        "u2g2-bee"
     ]
 }
