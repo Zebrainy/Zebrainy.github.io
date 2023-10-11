@@ -400,5 +400,14 @@
         "dots",
         "u1g5-diner",
         "diner" 
+    ],
+    "memory": [
+        "cs:AnimalPuzzle",
+        "animalpuzzle",
+        "u1g6-catcode-2",
+        "u3g5-shadows",
+        "dots",
+        "u1g5-kitties",
+        "u3g7-apples"
     ]
 }
