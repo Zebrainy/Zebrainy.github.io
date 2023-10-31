@@ -124,7 +124,7 @@ jobs:
         continue-on-error: true
         run: |
           MESSAGE=$(cat <<EOT
-          🧩*${{ inputs.slack_name }} ${{ env.VERSION_CLEAN }}* [${{ inputs.bundle_name }}](<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}})
+          :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION_CLEAN }}* [${{ inputs.bundle_name }}](https://github.com/${{github.repository}}/actions/runs/${{github.run_id}})
           [Страница сервиса (selectel)](https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html)
           *Ветка:* [${{ env.GIT_BRANCH_NAME }}](${{ env.GITHUB_BRANCH_URL }})
           EOT
