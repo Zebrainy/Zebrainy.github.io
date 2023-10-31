@@ -120,16 +120,20 @@ jobs:
           echo GIT_BRANCH_NAME=${GIT_BRANCH_NAME} >> $GITHUB_ENV
           echo GITHUB_BRANCH_URL=https://github.com/${{github.repository}}/tree/${GIT_BRANCH_NAME} >> $GITHUB_ENV
           
-      - name: Send URLs to slack
-        uses: archive/github-actions-slack@v2.4.0
-        with:
-          slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
-          slack-channel: ${{ inputs.SLACK_CHANNEL }}
-          # slack-optional-icon_emoji: ":${{ inputs.slack_icon }}:"
-          slack-text: |
-            :${{ inputs.slack_icon }}: *${{ inputs.slack_name }} ${{ env.VERSION_CLEAN }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.bundle_name }}>)
-            <https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html|Страница сервиса (selectel)>
-            *Ветка:* <${{ env.GITHUB_BRANCH_URL }}|${{ env.GIT_BRANCH_NAME }}>
+      - name: telegram-send
+        continue-on-error: true
+        run: |
+          MESSAGE=$(cat <<EOT
+          🧩*${{ inputs.slack_name }} ${{ env.VERSION_CLEAN }}* [${{ inputs.bundle_name }}](<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}})
+          [Страница сервиса (selectel)](https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html)
+          *Ветка:* [${{ env.GIT_BRANCH_NAME }}](${{ env.GITHUB_BRANCH_URL }})
+          EOT
+          )
+
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_APIKEY }}/sendMessage -d chat_id=${{ env.TELEGRAM_ID }} -d text="$MESSAGE" -d parse_mode="markdown"
+        env:
+          TELEGRAM_ID: -1002102909061
+
       - name: upload bundle
         uses: actions/upload-artifact@v2.2.0
         with:
