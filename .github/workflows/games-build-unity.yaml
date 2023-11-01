@@ -130,11 +130,15 @@ jobs:
           WEBGAME_BUILD_URL: https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
           PROTOCOL_URL: web-games://${{ inputs.game_name }}/${{ env.VERSION }}.zip
 
-      - name: Send URLs to slack
-        uses: archive/github-actions-slack@v1.0.3
-        with:
-          slack-bot-user-oauth-access-token: ${{ secrets.CI_CD_SLACK_TOKEN }}
-          slack-channel: ${{inputs.SLACK_CHANNEL}}
-          slack-text: |
-            :jigsaw: *${{ inputs.game_name }}* *${{ env.VERSION }}* (<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|${{ inputs.GAME_NAME_RU }}>) 
-            Selectel: <https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip|${{ inputs.game_name }}/${{ env.VERSION }}.zip>
+      - name: telegram-send
+        continue-on-error: true
+        run: |
+          MESSAGE=$(cat <<EOT
+          🧩 *${{ inputs.game_name }}* *${{ env.VERSION }}* [${{ inputs.GAME_NAME_RU }}](https://github.com/${{github.repository}}/actions/runs/${{github.run_id}})
+          Url: [${{ inputs.game_name }}/${{ env.VERSION }}.zip](https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip)
+          EOT
+          )
+
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_APIKEY }}/sendMessage -d chat_id=${{ env.TELEGRAM_ID }} -d text="$MESSAGE" -d parse_mode="markdown"
+        env:
+          TELEGRAM_ID: -1002060187203
