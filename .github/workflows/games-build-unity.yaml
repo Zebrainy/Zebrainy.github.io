@@ -130,6 +130,16 @@ jobs:
           WEBGAME_BUILD_URL: https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
           PROTOCOL_URL: web-games://${{ inputs.game_name }}/${{ env.VERSION }}.zip
 
+      - name: Create build metadata in our Squidex
+        run: |
+          curl https://zebrainy.github.io/scripts/squidex_create_our_build.sh > squidex.sh
+          chmod +x ./squidex.sh
+          SQUIDEX_TOKEN=$(curl    -X POST 'https://squidex.zebr-a.com/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.new_squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
+          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.game_name }}" "${{ env.VERSION }}" "${{ env.WEBGAME_BUILD_URL }}" "${{ inputs.CATALOG_GAME_ID }}" "${{ env.ZIPSIZE }}" "${{ env.PROTOCOL_URL }}"
+        env:
+          WEBGAME_BUILD_URL: https://471631.selcdn.ru/web-bundles/web-games/bundles/${{ inputs.game_name }}/${{ env.VERSION }}.zip
+          PROTOCOL_URL: web-games://${{ inputs.game_name }}/${{ env.VERSION }}.zip
+
       - name: telegram-send
         continue-on-error: true
         run: |
