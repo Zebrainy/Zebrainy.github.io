@@ -71,4 +71,4 @@ echo "build id: $BUILD_ID"
 
 curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
   "'$6'":{"iv":["'$BUILD_ID'"]}
-}' 'https://dev.zebr-a.com/squidex/tools/draft/client-versions/'$5'/patch'
+}' 'https://prod.zebr-a.com/squidex/tools/draft/client-versions/'$5'/patch'
