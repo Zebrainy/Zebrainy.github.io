@@ -103,15 +103,6 @@ jobs:
           echo Selectel:
           echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}/index.html"
           echo "https://471631.selcdn.ru/web-bundles/web-bundles/bundles/${{ inputs.bundle_name }}/${{ env.VERSION }}.zip"
-      
-      - name: Create build metadata in Squidex
-        run: |
-          curl https://zebrainy.github.io/scripts/squidex_web_bundle_build.sh > squidex.sh
-          chmod +x ./squidex.sh
-          SQUIDEX_TOKEN=$(curl    -X POST 'https://cloud.squidex.io/identity-server/connect/token'    -H 'Content-Type: application/x-www-form-urlencoded'    -d 'grant_type=client_credentials&client_id=skazbuka:webgame-cicd&client_secret=${{ secrets.squidex_client_secret }}&scope=squidex-api' | jq .access_token -r)
-          ./squidex.sh $SQUIDEX_TOKEN "${{ inputs.bundle_name }}" "${{ env.VERSION_CLEAN }}" "${{ env.BUNDLE_BUILD_URL }}" "${{ inputs.SQUIDEX_CLIENT_VERSION_ID }}" "${{ inputs.squidex_bundle_name }}" "${{ env.ZIPSIZE }}"
-        env:
-          BUNDLE_BUILD_URL: web-bundles://${{ inputs.bundle_name }}/${{ env.VERSION }}.zip
 
       - name: Create build metadata in our Squidex
         run: |
