@@ -30,7 +30,7 @@ fi
 
 set -e
 
-curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
+curl -k -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
   "name":{"iv":"'$2'"},
   "version":{"iv":"'$3'"},
   "zip":{"iv":"'$4'"},
@@ -45,7 +45,7 @@ echo "Response: $Response"
 
 if [ $BUILD_ID == "null" ]; then
         echo "Build_ID error. Curl without zipSize"
-        curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
+        curl -k -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
         "name":{"iv":"'$2'"},
         "version":{"iv":"'$3'"},
         "zip":{"iv":"'$4'"},
@@ -69,6 +69,6 @@ fi
 
 echo "build id: $BUILD_ID"
 
-curl -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
+curl -k -XPOST -H 'Authorization: Bearer '$1'' -H "Content-type: application/json" -d '{
   "'$6'":{"iv":["'$BUILD_ID'"]}
 }' 'https://prod.zebr-a.com/squidex/tools/draft/client-versions/'$5'/patch'
